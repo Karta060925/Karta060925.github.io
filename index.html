@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeWork索引</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <style>
         * {
             padding: 0;
@@ -14,15 +16,15 @@
             list-style: none;
             box-sizing: border-box;
             text-decoration: none;
+            font-family: 'Roboto', sans-serif, 'Noto Sans TC', sans-serif;
+            vertical-align: bottom;
         }
-
-        body {}
 
         .wrap {
             width: 1200px;
             min-height: 100vh;
             margin: 0 auto;
-
+            padding: 80px 0;
         }
 
         .wrap h1 {
@@ -30,7 +32,7 @@
             text-align: center;
             color: #666;
             font-weight: bolder;
-            margin: 80px 0 40px;
+            margin-bottom: 40px;
         }
 
         .homework-list {
@@ -50,12 +52,15 @@
         .homework-list .item a {
             display: inline-block;
             padding: 20px 0 10px;
+            position: relative;
         }
 
         .homework-list .item a h2 {
+            padding-top: 10px;
             text-align: center;
             font-size: 20px;
             color: #666;
+            border-top: 1px solid #ccc;
         }
 
         .homework-list .item a h2:hover {
@@ -64,6 +69,15 @@
 
         img {
             width: 100%;
+        }
+
+        span {
+            position: absolute;
+            bottom: 13px;
+            right: 10px;
+            font-size: 14px;
+            font-weight: bolder;
+            color: #999;
         }
     </style>
 </head>
@@ -78,20 +92,23 @@
                 <a href="/FirstFlex/index.html">
                     <img src=" /img/firstflex.png" alt="">
                     <h2>flex切版</h2>
+                    <span>2022.11.21</span>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/CourseTable/index.html">
                     <img src="/img/table.png" alt="">
-                    <h2>課表</h2>
+                    <h2>表格練習</h2>
+                    <span>2022.11.28</span>
                 </a>
             </div>
 
             <div class="item">
                 <a href="/Whoscall/index.html">
                     <img src=" /img/whoscall.png" alt="">
-                    <h2>Whoscall切版</h2>
+                    <h2>Whoscall</h2>
+                    <span>2022.11.28</span>
                 </a>
             </div>
 

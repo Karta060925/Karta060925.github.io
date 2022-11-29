@@ -9,6 +9,7 @@ body {
     display: flex;
     align-items: center;
     margin: auto;
+    padding: 40px 0;
 }
 
 table {
