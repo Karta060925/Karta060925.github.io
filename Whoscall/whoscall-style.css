@@ -36,6 +36,12 @@ h3 {
     display: inline-block;
 }
 
+.clear {
+    clear: both;
+}
+
+
+
 /* 導覽列 ----------------------------------*/
 .menu {
     width: 100%;
@@ -62,7 +68,7 @@ h3 {
 }
 
 .menu-item {
-    width: 1400px;
+    width: 80%;
     display: flex;
     align-items: center;
     margin: auto;
@@ -107,7 +113,24 @@ h3 {
     position: relative;
 }
 
-.main-container::before,
+.asset-7,
+.asset-8 {
+    position: absolute;
+}
+
+.main-container .asset-7 {
+    width: 210px;
+    top: 80px;
+    left: 0;
+}
+
+.main-container .asset-8 {
+    width: 300px;
+    bottom: 0;
+    right: 0;
+}
+
+/* .main-container::before,
 .main-container::after {
     content: '';
     position: absolute;
@@ -119,13 +142,13 @@ h3 {
 
 .main-container::before {
     background-image: url('./img/asset\ 7.svg');
-    top: 70px;
+    top: 80px;
 }
 
 .main-container::after {
     background-position: 100% 100%;
     background-image: url('./img/asset\ 8.svg');
-}
+} */
 
 .main-container .text {
     margin-top: 60px;
@@ -227,7 +250,7 @@ h3 {
 
 /* 介紹 */
 .introduce {
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 .introduce .introduce-item {
@@ -319,4 +342,279 @@ h3 {
 .partner .partner-content .partner-item .text p {
     font-size: 18px;
     line-height: 1.5;
+}
+
+/* 經驗分享 */
+.experience {
+    padding: 80px 0;
+}
+
+.experience h2 {
+    color: #2c323f;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.experience .experience-content {
+    display: flex;
+    width: 960px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.experience .experience-content .experience-item {
+    box-sizing: border-box;
+    width: 33.33333%;
+    border: 1px solid #d5d5d5;
+    padding: 20px;
+    margin: 0 1%;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgb(113 123 142 / 20%);
+
+}
+
+.experience .experience-content .experience-item .symbol {
+    position: relative;
+}
+
+.experience .experience-content .experience-item h3 {
+    font-size: 24px;
+    color: #2c323f;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.experience .experience-content .experience-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.experience .experience-content .experience-item .pic {
+    float: right;
+    margin-top: 10px;
+}
+
+.experience .experience-content .experience-item .symbol img {
+    width: 30px;
+    margin-bottom: 20px;
+}
+
+/* 申請資料 */
+.apply {
+    margin: 60px 0;
+}
+
+.apply .apply-title {
+    background-color: #f5f6f9;
+    text-align: center;
+}
+
+.apply .apply-title h2 {
+    display: inline-block;
+    color: #2c323f;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.apply .apply-title p {
+    display: block;
+    font-size: 20px;
+    color: #00c300;
+    padding-bottom: 50px;
+}
+
+.apply .apply-content {
+    width: 960px;
+    margin: 80px auto;
+
+
+}
+
+.apply .apply-content .apply-content-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.apply .apply-content h3 {
+    font-size: 24px;
+    color: #2c323f;
+}
+
+.apply .apply-content .form-item {
+    width: 43%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.apply .apply-content .form-item label {
+    font-size: 18px;
+    color: #2c323f;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.apply .apply-content .form-item input,
+.apply .apply-content .form-item select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.apply .apply-content span {
+    font-size: 15px;
+    display: inline-block;
+    color: #717b8e;
+    padding: 10px 0;
+}
+
+.apply .apply-content p {
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: #424c5f;
+}
+
+.apply .apply-content .center {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.apply .apply-content .submit {
+    border: none;
+    padding: 12px 70px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px auto;
+}
+
+/* 頁尾 */
+footer {
+    background-color: #2c323f;
+    color: #fff;
+    padding: 30px 0 60px;
+}
+
+footer .foot {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+footer .foot-link,
+footer .foot-reserved {
+    width: 50%;
+}
+
+footer .foot-link {
+    display: flex;
+}
+
+footer .foot-link a {
+    text-decoration: none;
+    color: #d5d5d5;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.2s ease;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+footer .foot-link .foot-item {
+    width: 28.33333%;
+}
+
+footer .foot-link .foot-item .title,
+footer .foot-contact .foot-item .title {
+    font-weight: bolder;
+    padding: 15px 0;
+    font-size: 17px;
+}
+
+footer .foot-contact .foot-item .powered-title {
+    font-weight: lighter;
+    padding: 20px 0 10px;
+    font-size: 15px;
+}
+
+footer .foot-contact {
+    margin: 0 0 0 auto;
+}
+
+footer .foot-contact .foot-item {
+    width: 230px;
+    box-sizing: border-box;
+}
+
+footer .foot-contact .foot-item a {
+    color: #d5d5d5;
+    font-size: 30px;
+    transition: color 0.2s ease;
+}
+
+footer .foot-contact .foot-item img {
+    width: 100%;
+}
+
+footer .foot-contact .foot-item li a {
+    float: left;
+    margin-right: 37px;
+}
+
+footer .foot-contact .foot-item .mr-0 {
+    margin-right: 0;
+}
+
+footer .foot-reserved {
+    width: 1200px;
+    border-top: 1px solid #f5f6f9;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .foot-reserved .reserved {
+    display: flex;
+    color: #d5d5d5;
+    font-weight: bolder;
+}
+
+footer .foot-reserved .reserved a {
+    color: #d5d5d5;
+    padding: 0 20px;
+    transition: color 0.2s ease;
+}
+
+footer .foot-link a:hover,
+footer .foot-contact .foot-item a:hover,
+footer .foot-reserved .reserved a:hover {
+    color: #fff;
+}
+
+footer .language {
+    display: flex;
+    align-items: center;
+}
+
+footer .language .globe-icon {
+    font-size: 20px;
+}
+
+footer select {
+    width: 90%;
+    background: #2c323f;
+    font-size: 16px;
+    padding: 5px 0 5px 10PX;
+    border: none;
+    color: #f5f6f9;
+    cursor: pointer;
+    font-weight: bolder;
+    margin: 0 0 0 auto;
 }
