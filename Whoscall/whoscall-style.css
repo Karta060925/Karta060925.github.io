@@ -1,0 +1,322 @@
+/* 共用 */
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.btn {
+    background: #00c300;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #01e101;
+    color: #fff;
+}
+
+h2,
+h3 {
+    color: #00c300;
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.text-p {
+    font-size: 24px;
+}
+
+.ex {
+    font-size: 15px;
+    color: #717b8e;
+    display: inline-block;
+}
+
+/* 導覽列 ----------------------------------*/
+.menu {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 24px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+.menu h1 {
+    width: 150px;
+    margin-right: 10px;
+    line-height: 30px;
+    background-image: url('./img/asset\ 6.svg');
+    background-repeat: no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu-item {
+    width: 1400px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.btn-download {
+    margin: 0 0 0 auto;
+    display: block;
+    /* text-align: right; */
+}
+
+.btn-download .btn {
+    padding: 10px 32px;
+}
+
+.menu .menu-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu .menu-link .link {
+    display: inline-block;
+    font-weight: 600;
+    color: #2c323f;
+    padding: 32px 16px;
+    transition: all 0.2s ease;
+}
+
+.menu .menu-link .link:hover {
+    color: #00c300;
+}
+
+/* banner ----------------------------------*/
+.main-container {
+    width: 100%;
+    height: 100vh;
+    background: url(https://d3qzy1rn79qj7v.cloudfront.net/hero_images/valid-number-1440.jpg) no-repeat center center/cover scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main-container::before,
+.main-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.main-container::before {
+    background-image: url('./img/asset\ 7.svg');
+    top: 70px;
+}
+
+.main-container::after {
+    background-position: 100% 100%;
+    background-image: url('./img/asset\ 8.svg');
+}
+
+.main-container .text {
+    margin-top: 60px;
+    width: 960px;
+    position: relative;
+    z-index: 2;
+}
+
+.main-container img {
+    width: 493px;
+}
+
+.main-container .text h2 {
+    color: #00c300;
+    font-size: 6rem;
+}
+
+.main-container .text h2 small {
+    font-size: 4rem;
+    line-height: 1.5;
+}
+
+.main-container .text p {
+    padding-top: 20px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 500;
+    color: #2c323f;
+    line-height: 1.5;
+}
+
+.main-container .text .btn {
+    padding: 12px 70px;
+    font-size: 22px;
+}
+
+.main-container .text .btn-box {
+    display: inline-block;
+    text-align: center;
+}
+
+.main-container .text .btn-box span {
+    display: block;
+    padding: 20px 10px;
+    color: #00c300;
+    font-weight: bolder;
+}
+
+
+
+
+/* 市場調查 ----------------------------------*/
+.content {
+    width: 100%;
+}
+
+.content .data-text,
+.content .introduce {
+    width: 960px;
+    margin: 0 auto;
+    color: #2c323f;
+}
+
+.content .data-text {
+    text-align: center;
+}
+
+.content .data-text p {
+    font-size: 24px;
+    margin: 80px 0 20px;
+    font-weight: bolder;
+    display: inline-block;
+    position: relative;
+}
+
+.content .data-text p::before {
+    content: '※';
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    font-size: 16px;
+}
+
+
+.content .data-text h2 {
+    color: #2c323f;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.content .data-text .green-color {
+    color: #00c300;
+}
+
+/* .content .data-text .ex {
+    font-size: 15px;
+    color: #717b8e;
+} */
+
+/* 介紹 */
+.introduce {
+    padding-top: 80px;
+}
+
+.introduce .introduce-item {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.introduce .introduce-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.introduce .introduce-item .text {
+    width: 50%;
+
+}
+
+.introduce .introduce-item .text h3 {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+.introduce .introduce-item .text .ex-icon::before {
+    content: '※';
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    font-size: 16px;
+    color: #2c323f;
+}
+
+.introduce .introduce-item .text p {
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+.introduce .introduce-item .text span {
+    margin-top: 20px;
+}
+
+.introduce .introduce-item .pic {
+    width: 45%;
+
+}
+
+/* 夥伴 */
+.partner {
+    background: #f5f6f9;
+    padding: 80px 0;
+    text-align: center;
+
+}
+
+.partner h2 {
+    color: #2c323f;
+    margin-bottom: 40px;
+}
+
+.partner .partner-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 960px;
+    margin: auto;
+
+}
+
+.partner .partner-content .partner-item {
+    width: 27%;
+    /* margin: 0 14px; */
+}
+
+.partner .partner-content .partner-item .pic {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 20px;
+}
+
+.partner .partner-content .partner-item .text h3 {
+    color: #2c323f;
+    font-size: 21px;
+}
+
+.partner .partner-content .partner-item .text p {
+    font-size: 18px;
+    line-height: 1.5;
+}

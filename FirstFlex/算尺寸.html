@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>算尺寸</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .container .title {
+            text-align: center;
+            margin: 40px 0 80px;
+        }
+
+        .content {
+            display: flex;
+            /* justify-content: space-between; */
+        }
+
+        .content .list {
+            width: 380px;
+            margin: 0 10px;
+        }
+
+        .content .list:first-child .list-item {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        /* .content .list:last-child {} */
+
+        .content .list-item {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .content .list .list-item .pic,
+        .content .list .list-item .text {
+            margin: 0 10px;
+
+        }
+
+        .content .list .list-item .pic {
+            width: 80px;
+        }
+
+        .content .list .list-item .pic img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .content .list .list-item .text {
+            width: 300px;
+        }
+
+        .content .main-pic {
+            width: 380px;
+            margin: 0 10px;
+        }
+
+        .content .main-pic img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 尺寸 1200px -->
+    <article class="container">
+
+        <!-- 上方文字區塊 -->
+        <div class="title">
+            <h1>title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ea reiciendis eos suscipit, perferendis
+                illum reprehenderit aspernatur quae quas inventore odit molestiae debitis consequuntur tempore vero,
+                dolorem quia. Non, facilis.</p>
+        </div>
+
+        <!-- 下方文字區塊 -->
+        <div class="content">
+
+            <!-- 左側清單資料 -->
+            <div class="list">
+                <div class="list-item">
+                    <!-- 尺寸 400px -->
+                    <div class="pic">
+                        <!-- 尺寸 80px -->
+                        <img src="https://picsum.photos/300/300/?random=10">
+                    </div>
+                    <div class="text">
+                        <!-- 尺寸 300px -->
+                        <h2>title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus id a atque,
+                            quaerat pariatur ipsam numquam deleniti eligendi molestiae.</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/300/?random=10">
+                    </div>
+                    <div class="text">
+                        <h2>title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus id a atque,
+                            quaerat pariatur ipsam numquam deleniti eligendi molestiae.</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/300/?random=10">
+                    </div>
+                    <div class="text">
+                        <h2>title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus id a atque,
+                            quaerat pariatur ipsam numquam deleniti eligendi molestiae.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中間大圖 -->
+            <div class="main-pic">
+                <!-- 尺寸 400px -->
+                <img src="https://picsum.photos/500/800/?random=10">
+            </div>
+
+            <!-- 左側清單資料 -->
+            <div class="list">
+                <!-- 尺寸 400px -->
+                <div class="list-item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/300/?random=10">
+                    </div>
+                    <div class="text">
+                        <h2>title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus id a atque,
+                            quaerat pariatur ipsam numquam deleniti eligendi molestiae.</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/300/?random=10">
+                    </div>
+                    <div class="text">
+                        <h2>title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus id a atque,
+                            quaerat pariatur ipsam numquam deleniti eligendi molestiae.</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/300/?random=10">
+                    </div>
+                    <div class="text">
+                        <h2>title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus id a atque,
+                            quaerat pariatur ipsam numquam deleniti eligendi molestiae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+</body>
+
+</html>
