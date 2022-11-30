@@ -40,17 +40,13 @@ h3 {
     clear: both;
 }
 
-
-
 /* 導覽列 ----------------------------------*/
 .menu {
     width: 100%;
     background: #fff;
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 0 24px;
     position: fixed;
     top: 0;
     z-index: 9;
@@ -149,10 +145,17 @@ h3 {
     background-position: 100% 100%;
     background-image: url('./img/asset\ 8.svg');
 } */
+.main-container .text,
+.content .data-text,
+.content .introduce,
+.partner .partner-content,
+.experience .experience-content,
+.apply .apply-content {
+    width: 960px;
+}
 
 .main-container .text {
     margin-top: 60px;
-    width: 960px;
     position: relative;
     z-index: 2;
 }
@@ -207,7 +210,6 @@ h3 {
 
 .content .data-text,
 .content .introduce {
-    width: 960px;
     margin: 0 auto;
     color: #2c323f;
 }
@@ -267,7 +269,6 @@ h3 {
 
 .introduce .introduce-item .text {
     width: 50%;
-
 }
 
 .introduce .introduce-item .text h3 {
@@ -318,7 +319,6 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 960px;
     margin: auto;
 
 }
@@ -357,7 +357,6 @@ h3 {
 
 .experience .experience-content {
     display: flex;
-    width: 960px;
     margin: auto;
     justify-content: space-between;
 }
@@ -424,10 +423,7 @@ h3 {
 }
 
 .apply .apply-content {
-    width: 960px;
     margin: 80px auto;
-
-
 }
 
 .apply .apply-content .apply-content-form {
