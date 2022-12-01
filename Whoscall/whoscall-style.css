@@ -40,6 +40,10 @@ h3 {
     clear: both;
 }
 
+.line {
+    background: linear-gradient(180deg, transparent 0, transparent 50%, rgba(151, 245, 151, .5) 0, rgba(151, 245, 151, .5));
+}
+
 /* 導覽列 ----------------------------------*/
 .menu {
     width: 100%;
@@ -149,7 +153,6 @@ h3 {
 .content .data-text,
 .content .introduce,
 .partner .partner-content,
-.experience .experience-content,
 .apply .apply-content {
     width: 960px;
 }
@@ -356,6 +359,7 @@ h3 {
 }
 
 .experience .experience-content {
+    width: 980px;
     display: flex;
     margin: auto;
     justify-content: space-between;
@@ -376,6 +380,10 @@ h3 {
     position: relative;
 }
 
+.experience .experience-content .experience-item .symbol img {
+    transform: scaleX(-1);
+}
+
 .experience .experience-content .experience-item h3 {
     font-size: 24px;
     color: #2c323f;
@@ -386,6 +394,8 @@ h3 {
 .experience .experience-content .experience-item p {
     font-size: 16px;
     line-height: 1.5;
+    color: #2c323f;
+    padding-bottom: 16px;
 }
 
 .experience .experience-content .experience-item .pic {
