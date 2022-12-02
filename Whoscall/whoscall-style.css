@@ -451,6 +451,7 @@ h3 {
     width: 43%;
     margin-top: 20px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .apply .apply-content .form-item label {
@@ -470,6 +471,18 @@ h3 {
     border-radius: 8px;
     display: block;
     box-sizing: border-box;
+}
+
+.apply .apply-content .form-item select {
+    cursor: pointer;
+    appearance: none;
+}
+
+.apply .apply-content .form-item .arrow-icon {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    cursor: pointer;
 }
 
 .apply .apply-content span {
