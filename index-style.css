@@ -67,3 +67,16 @@ span {
     font-weight: bolder;
     color: #999;
 }
+
+@media screen and (max-width: 1200px) {
+    .wrap {
+        width: 100%;
+    }
+
+    .homework-list .item {
+        width: 90%;
+        margin-bottom: 80px;
+    }
+
+
+}
