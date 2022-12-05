@@ -52,19 +52,18 @@
     border-top: 1px solid #ccc;
 }
 
-.homework-list .item a h2:hover {
-    color: #999;
-}
-
-.homework-list .item a img:hover {
-    transform: scale(1.1);
-}
-
 img {
     width: 100%;
     transition: all 0.2s ease-in-out;
 }
 
+.homework-list .item:hover a h2 {
+    color: #999;
+}
+
+.homework-list .item:hover a img {
+    transform: scale(1.1);
+}
 
 span {
     position: absolute;
