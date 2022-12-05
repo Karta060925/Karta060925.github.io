@@ -102,7 +102,7 @@ h3 {
 }
 
 /* banner ----------------------------------*/
-.main-container {
+.banner {
     width: 100%;
     height: 100vh;
     background: url(https://d3qzy1rn79qj7v.cloudfront.net/hero_images/valid-number-1440.jpg) no-repeat center center/cover scroll;
@@ -117,20 +117,20 @@ h3 {
     position: absolute;
 }
 
-.main-container .asset-7 {
+.banner .asset-7 {
     width: 210px;
     top: 80px;
     left: 0;
 }
 
-.main-container .asset-8 {
+.banner .asset-8 {
     width: 300px;
     bottom: 0;
     right: 0;
 }
 
-/* .main-container::before,
-.main-container::after {
+/* .banner::before,
+.banner::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -139,16 +139,16 @@ h3 {
     z-index: 1;
 }
 
-.main-container::before {
+.banner::before {
     background-image: url('./img/asset\ 7.svg');
     top: 80px;
 }
 
-.main-container::after {
+.banner::after {
     background-position: 100% 100%;
     background-image: url('./img/asset\ 8.svg');
 } */
-.main-container .text,
+.banner .text,
 .content .data-text,
 .content .introduce,
 .partner .partner-content,
@@ -156,28 +156,28 @@ h3 {
     width: 960px;
 }
 
-.main-container .text {
+.banner .text {
     margin-top: 60px;
     position: relative;
     z-index: 2;
     padding-left: 60px;
 }
 
-.main-container img {
+.banner img {
     width: 493px;
 }
 
-.main-container .text h2 {
+.banner .text h2 {
     color: #00c300;
     font-size: 6rem;
 }
 
-.main-container .text h2 small {
+.banner .text h2 small {
     font-size: 4rem;
     line-height: 1.5;
 }
 
-.main-container .text p {
+.banner .text p {
     padding-top: 20px;
     margin-bottom: 40px;
     font-size: 36px;
@@ -186,17 +186,17 @@ h3 {
     line-height: 1.5;
 }
 
-.main-container .text .btn {
+.banner .text .btn {
     padding: 12px 70px;
     font-size: 22px;
 }
 
-.main-container .text .btn-box {
+.banner .text .btn-box {
     display: inline-block;
     text-align: center;
 }
 
-.main-container .text .btn-box span {
+.banner .text .btn-box span {
     display: block;
     padding: 20px 10px;
     color: #00c300;
@@ -266,7 +266,8 @@ h3 {
     justify-content: center;
 }
 
-.introduce .introduce-item.reverse {
+
+.introduce .introduce-item:nth-child(even) {
     flex-direction: row-reverse;
 }
 
@@ -597,6 +598,7 @@ footer .foot-reserved {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer .foot-reserved .reserved {
