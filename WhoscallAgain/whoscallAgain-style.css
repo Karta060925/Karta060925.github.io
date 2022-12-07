@@ -1,0 +1,661 @@
+:root {
+    --main-color: #00c300;
+    --second-color: #2c323f;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif, 'Noto Sans TC', sans-serif;
+    scroll-behavior: smooth;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+h2,
+h3 {
+    font-size: 36px;
+    color: #00c300;
+}
+
+p {
+    font-size: 24px;
+    color: #2c323f;
+}
+
+/* 共用 */
+.btn {
+    background: var(--main-color);
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #01e101;
+}
+
+.ex {
+    color: #717b8e;
+}
+
+.line {
+    background: linear-gradient(180deg, transparent 0, transparent 50%, rgba(151, 245, 151, .5) 0, rgba(151, 245, 151, .5));
+}
+
+#apply:target {
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+.section-header,
+.section-banner,
+.section-data,
+.section-partner .partner,
+.section-experience,
+.apply-form {
+    width: 960px;
+    margin: auto;
+}
+
+/* qrcode */
+.section-qrcode {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.397);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 8;
+}
+
+.section-qrcode .qrcode-box {
+    width: 350px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 56px 44px 0;
+    text-align: center;
+}
+
+.section-qrcode .qrcode-box p {
+    font-size: 30px;
+}
+
+.section-qrcode .qrcode-box span {
+    color: #01e101;
+    font-weight: bolder;
+}
+
+.section-qrcode .qrcode-box img {
+    width: 100%;
+}
+
+#check:checked {
+    transition: all 0.2s ease;
+}
+
+#check:checked~.section-qrcode {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.section-qrcode .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #2c323f;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.check {
+    display: none;
+}
+
+/* 選單 */
+header {
+    width: 100%;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0 24px;
+
+}
+
+
+.section-header {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header .menu {
+    display: flex;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+.section-header .menu h1 {
+    width: 150px;
+    margin-right: 10px;
+    background-image: url('../Whoscall/img/asset\ 6.svg');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.section-header .menu .navbar {
+    display: flex;
+    align-items: center;
+
+}
+
+.section-header .menu .navbar a {
+    padding: 32px 10px;
+    color: #2c323f;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+
+.section-header .menu .navbar a:hover {
+    color: var(--main-color);
+}
+
+.section-header .btn-download {
+    padding: 8px 36px;
+
+}
+
+/* banner */
+.section-banner {
+    margin-top: 80px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: url(https://d3qzy1rn79qj7v.cloudfront.net/hero_images/valid-number-2880.jpg) no-repeat center center/ cover scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.section-banner::after,
+.section-banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.section-banner::after {
+    background-image: url(https://assets.whoscall.com/assets/media/images/hero-deco-left-38f79dc73360dd332b0833129ad5893a.svg);
+    top: 0;
+}
+
+.section-banner::before {
+    background-image: url(https://assets.whoscall.com/assets/media/images/hero-deco-right-320d18f9859768da586a4cf2651816c2.svg);
+    bottom: 0;
+    right: 0;
+    background-position: 100% 100%;
+}
+
+.section-banner .banner-text {
+    width: 960px;
+    padding-left: 65px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-banner .banner-text h2 {
+    background-image: url(https://d3qzy1rn79qj7v.cloudfront.net/number-hero-title-1479.png.webp);
+    background-repeat: no-repeat;
+    background-size: 493px 66px;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 493px;
+    height: 66px;
+}
+
+.section-banner .banner-text p {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.3;
+    padding-bottom: 20px;
+}
+
+.section-banner .banner-text span {
+    display: block;
+    padding-top: 30px;
+    color: #00c300;
+    padding-left: 10px;
+    font-weight: bolder;
+}
+
+.section-banner .banner-text .btn-apply {
+    padding: 16px 68px;
+}
+
+/* 市調 */
+.section-data {
+    padding: 60px 0;
+}
+
+.section-data .data-text {
+    text-align: center;
+}
+
+.section-data .data-text h2 {
+    color: #2c323f;
+}
+
+.section-data .data-text .green {
+    color: #00c300;
+}
+
+.section-data .data-text P {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font-weight: 600;
+}
+
+.section-data .data-text P::before {
+    content: '※';
+    position: absolute;
+    font-size: 14px;
+    top: -5px;
+    right: -15px;
+    z-index: 2;
+}
+
+.section-data .data {
+    margin: 60px 0;
+}
+
+.section-data .data .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-data .data .item .x {
+    position: relative;
+    display: inline-block;
+}
+
+.section-data .data .item .x::before {
+    content: '※';
+    position: absolute;
+    font-size: 14px;
+    top: -5px;
+    right: -15px;
+    z-index: 2;
+    color: #717b8e;
+}
+
+.section-data .data .item:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.section-data .data .item .text {
+    width: 45%;
+}
+
+.section-data .data .item .pic {
+    width: 48%;
+}
+
+.section-data .data .item .pic img {
+    width: 100%;
+}
+
+/* 夥伴 */
+.section-partner {
+    padding: 60px 0;
+    background: #f5f6f9;
+}
+
+.section-partner h2 {
+    color: #2c323f;
+    text-align: center;
+}
+
+.section-partner .partner {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-partner .partner .item {
+    width: 30.33333%;
+    text-align: center;
+}
+
+.section-partner .partner .item h3 {
+    color: #2c323f;
+    font-size: 20px;
+}
+
+.section-partner .partner .item p {
+    padding-top: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.section-partner .partner img {
+    width: 50%;
+    margin: auto;
+}
+
+/* 分享 */
+.section-experience {
+    padding: 60px 0;
+}
+
+.section-experience h2 {
+    color: #2c323f;
+    text-align: center;
+}
+
+.section-experience .experience {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-experience .experience .item {
+    width: 28.33333%;
+    box-shadow: 0 2px 10px rgb(113 123 142 / 20%);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    padding: 20px 15px;
+}
+
+.section-experience .experience .item .symbol {
+    width: 60px;
+}
+
+.section-experience .experience .item .symbol img {
+    transform: scaleX(-1);
+}
+
+.section-experience .experience .item h3 {
+    color: #2c323f;
+    font-size: 24px;
+}
+
+.section-experience .experience .item p {
+    padding-top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2c323f;
+}
+
+.section-experience .experience .pic {
+    text-align: right;
+}
+
+.section-apply .apply-text {
+    background: #f5f6f9;
+    text-align: center;
+    padding: 60px 0 20px;
+}
+
+.section-apply .apply-text h2 {
+    color: #2c323f;
+}
+
+.section-apply .apply-text p {
+    color: #00c300;
+    font-size: 20px;
+}
+
+.section-apply .apply-form .apply-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section-apply .apply-form {
+    padding: 30px 0;
+}
+
+.section-apply .apply-form .form-title {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.section-apply .apply-form .apply-item .item {
+    width: 43.555555%;
+    position: relative;
+}
+
+
+
+.section-apply .apply-form .apply-item label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c323f;
+}
+
+.section-apply .apply-form .apply-item input,
+.section-apply .apply-form .apply-item select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 10px;
+    border: 1px solid #b7bcd6;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #47505a;
+    line-height: 1.45;
+    font-size: 15px;
+}
+
+.section-apply .apply-form .apply-item select {
+    cursor: pointer;
+    appearance: none;
+}
+
+.section-apply .apply-form .apply-item .item span {
+    margin: 15px 0;
+    color: #717b8e;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.section-apply .apply-form .apply-item .item .arrow-icon {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.section-apply .apply-form p {
+    color: #47505a;
+    font-size: 14px;
+
+}
+
+.section-apply .apply-form .btn-box {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.section-apply .apply-form .btn {
+    padding: 12px 70px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+}
+
+/* 頁尾 */
+footer {
+    background-color: var(--second-color);
+    color: #fff;
+    padding: 30px 0 60px;
+    width: 100%;
+}
+
+footer .footer-foot {
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer .footer-foot .foot {
+    display: flex;
+    margin: 0 auto;
+}
+
+footer .footer-foot .foot-link,
+footer .footer-foot .foot-reserved {
+    width: 50%;
+}
+
+footer .footer-foot .foot-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-foot .foot-link a {
+    text-decoration: none;
+    color: #d5d5d5;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.2s ease;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+footer .footer-foot .foot-link .foot-item {
+    width: 28.33333%;
+    padding-inline-start: 0;
+}
+
+footer .footer-foot .foot-link .foot-item .title,
+footer .footer-foot .foot-contact .foot-item .title {
+    font-weight: bolder;
+    padding: 15px 0;
+    font-size: 17px;
+}
+
+footer .footer-foot .foot-contact .foot-item .powered-title {
+    font-weight: lighter;
+    padding: 20px 0 10px;
+    font-size: 15px;
+}
+
+footer .footer-foot .foot-contact {
+    margin: 0 0 0 auto;
+}
+
+footer .footer-foot .foot-contact .foot-item {
+    width: 230px;
+    padding-inline-start: 0;
+    box-sizing: border-box;
+}
+
+footer .footer-foot .foot-contact .foot-item:nth-child(2) {
+    margin-top: 50px;
+}
+
+footer .footer-foot .foot-contact .foot-item a {
+    color: #d5d5d5;
+    font-size: 30px;
+    transition: color 0.2s ease;
+}
+
+footer .footer-foot .foot-contact .foot-item img {
+    width: 100%;
+}
+
+footer .footer-foot .foot-contact .foot-item li a {
+    float: left;
+    margin-right: 37px;
+}
+
+footer .footer-foot .foot-contact .foot-item .mr-0 {
+    margin-right: 0;
+}
+
+footer .footer-foot .foot-reserved {
+    width: 100%;
+    border-top: 1px solid rgb(213, 213, 213);
+    margin: 30px auto 0;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-foot .foot-reserved .reserved {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-foot .foot-reserved .reserved p {
+    color: #d5d5d5;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+footer .footer-foot .foot-reserved .reserved a {
+    color: #d5d5d5;
+    padding: 0 20px;
+    transition: color 0.2s ease;
+}
+
+footer .footer-foot .foot-link a:hover,
+footer .footer-foot .foot-contact .foot-item a:hover,
+footer .footer-foot .foot-reserved .reserved a:hover {
+    color: #fff;
+}
+
+footer .footer-foot .language {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+footer .footer-foot .language .globe-icon {
+    font-size: 20px;
+    position: absolute;
+    left: 20%;
+}
+
+footer .footer-foot select {
+    width: 70%;
+    background: #2c323f;
+    font-size: 16px;
+    padding: 5px 0 5px 10PX;
+    border: none;
+    color: #f5f6f9;
+    cursor: pointer;
+    font-weight: bolder;
+    margin: 0 0 0 auto;
+}
