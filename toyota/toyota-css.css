@@ -15,16 +15,41 @@ img {
 .section-advantage .advantage-body {
     width: 960px;
     margin: auto;
+    overflow: hidden;
 }
 
 .section-advantage .advantage-body .item {
     position: relative;
+    margin-bottom: 60px;
 }
 
-.section-advantage .advantage-body .item .text-title {
+
+.section-advantage .advantage-body .item::before {
+    content: '';
+    width: 440px;
+    height: 280px;
+    background: #f4f4f4;
+    position: absolute;
+    top: 45px;
+    right: -82px;
+    z-index: 1;
+}
+
+.section-advantage .advantage-body .item:nth-child(even):before {
+    content: '';
+    width: 540px;
+    height: 440px;
+    background: #f4f4f4;
+    position: absolute;
+    top: 40px;
+    right: 170px;
+    z-index: 1;
+}
+
+.section-advantage .advantage-body .item .text-card {
     color: #fff;
-    width: 340px;
-    background: url('./img/dot.jpg') repeat center center/ cover scroll;
+    width: 354px;
+    background: url('./img/dot.png') repeat center center/ cover scroll;
     background-color: #000;
     background-size: 15px;
     position: absolute;
@@ -32,51 +57,95 @@ img {
     z-index: 3;
 }
 
-.section-advantage .advantage-body .item .text-title .title {
+.section-advantage .advantage-body .item:nth-child(even) .text-card {
+    position: absolute;
+    left: auto;
+    right: 0;
+}
+
+.section-advantage .advantage-body .item .text-card .card-title {
     background-color: #bb0404;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
 }
 
-.section-advantage .advantage-body .item .text-title h3 {
-    font-size: 50px;
+.section-advantage .advantage-body .item:nth-child(even) .text-card .card-title {
+    flex-direction: row-reverse;
+}
+
+.section-advantage .advantage-body .item .text-card h3 {
+    font-size: 52px;
     font-weight: lighter;
     padding-left: 30px;
+    /* padding-top: 30px; */
 }
 
-.section-advantage .advantage-body .item .text-title .title span {
+.section-advantage .advantage-body .item:nth-child(even) .text-card h3 {
+    padding-right: 30px;
+    padding-left: 0;
+
+}
+
+.section-advantage .advantage-body .item .text-card .card-title span {
     font-size: 120px;
     writing-mode: vertical-lr;
     line-height: 90px;
+    font-weight: lighter;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.section-advantage .advantage-body .item .text-title .title-content {
+.section-advantage .advantage-body .item .text-card .card-content {
     padding: 20px;
 }
 
-.section-advantage .advantage-body .item .text-title h4 {
+.section-advantage .advantage-body .item .text-card h4 {
     font-size: 24px;
     padding-bottom: 10px;
     padding-top: 20px;
 }
 
-.section-advantage .advantage-body .item .text-title p {
-    font-size: 16px;
+.section-advantage .advantage-body .item .text-card p {
+    font-size: 19px;
     font-weight: lighter;
     line-height: 1.3;
     padding-bottom: 30px;
+    text-align: justify;
     letter-spacing: 4px;
 }
 
 .section-advantage .advantage-body .item .pic {
-    width: 67.5%;
+    width: 72%;
     margin-left: auto;
-    padding: 135px 0 250px;
+    padding: 135px 0 0;
     margin-right: 80px;
     position: relative;
     z-index: 2;
+}
+
+.section-advantage .advantage-body .item:nth-child(even) .pic {
+    width: 72%;
+    margin-left: 5px;
+    padding: 135px 0 0;
+    margin-right: 0;
+}
+
+.section-advantage .advantage-body .item .pic .player {
+    position: absolute;
+    right: -10px;
+    top: 60%;
+    font-size: 20px;
+    background: #bb0404;
+    padding: 8px 20px;
+    z-index: 9;
+    color: #fff;
+    cursor: pointer;
+}
+
+.section-advantage .advantage-body .item:nth-child(even) .pic .player {
+    position: absolute;
+    right: auto;
+    left: -5px;
 }
 
 .section-advantage .advantage-body .item .pic img {
@@ -84,38 +153,44 @@ img {
     z-index: 3;
 }
 
-.section-advantage .advantage-body .item .pic::before {
+/* .section-advantage .advantage-body .item .pic::before {
     content: '';
-    width: 400px;
+    width: 440px;
     height: 300px;
     background: #f4f4f4;
     position: absolute;
     top: 45px;
-    right: -80px;
+    right: -82px;
     z-index: 1;
-}
+} */
 
-.section-advantage .advantage-body .text-content {
+.section-advantage .advantage-body .item .text-content {
     background: #eeeeee;
-    width: 70%;
+    width: 71%;
     z-index: 5;
     bottom: 20px;
-    margin: 0 auto 0 0;
-    margin-left: 60px;
+    margin-left: 50px;
     padding: 20px 25px;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: -30px;
+}
+
+.section-advantage .advantage-body .item:nth-child(even) .text-content {
+    right: 0;
+    margin-left: auto;
 }
 
 .section-advantage .advantage-body .text-content .content-title {
     color: #bb0404;
     position: relative;
     font-weight: bolder;
+    font-size: 18px;
+    padding-right: 8px;
 }
 
-.section-advantage .advantage-body .text-content .content-title::before {
+/* .section-advantage .advantage-body .text-content .content-title::before {
     content: '';
-    width: 73%;
+    width: 70%;
     height: 1px;
     background: #bb0404;
     position: absolute;
@@ -123,7 +198,19 @@ img {
     right: 0;
     top: 50%;
 
+} */
+.section-advantage .advantage-body .text-content .content-title-box {
+    display: flex;
+    align-items: center;
 }
+
+.section-advantage .advantage-body .text-content .line {
+    flex-grow: 1;
+    height: 1px;
+    background: #bb0404;
+}
+
+
 
 .section-advantage .advantage-body .text-content h5 {
     display: inline-block;
@@ -133,21 +220,34 @@ img {
     padding: 5px 10px 3px;
     font-weight: lighter;
     margin: 10px 0;
-    border-radius: 5px;
+    border-radius: 3px;
+}
+
+.section-advantage .advantage-body .text-content .content-p {
+    display: flex;
+}
+
+.section-advantage .advantage-body .text-content span {
+    color: #bb0404;
+    padding: 2px 5px 0 15px;
+    /* padding-left: 15px;
+    padding-right: 5px;
+    padding-top: 2px; */
 }
 
 .section-advantage .advantage-body .text-content .dot {
-    padding-left: 25px;
+    /* padding-left: 25px; */
     position: relative;
     color: #666;
     line-height: 1.2;
     font-size: 15px;
 }
 
-.section-advantage .advantage-body .text-content .dot::after {
+/* .section-advantage .advantage-body .text-content .dot::before {
     content: '•';
     color: #bb0404;
+
     position: absolute;
     left: 15px;
     top: 0;
-}
+} */
