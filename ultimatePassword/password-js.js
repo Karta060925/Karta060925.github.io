@@ -3,7 +3,6 @@ const numInput = document.querySelector('.num-input')
 const warnText = document.querySelector('span')
 const btnClick = document.querySelector('.btn-enter')
 const btnValue = document.querySelector('.value')
-const btnResult = document.querySelector('.btn-result')
 const numText = document.querySelector('p')
 
 let light = document.querySelector('.light')
@@ -11,8 +10,6 @@ let light = document.querySelector('.light')
 const imgBomb = document.querySelector('.img-bomb')
 const imgBomber = document.querySelector('.img-bomber')
 let sectionBomb = document.querySelector('.section-bomb')
-let btnNumber = document.querySelectorAll('.btn-number')
-let btnF5 = document.querySelector('.btn-f5')
 
 let num = numInput.value.text
 
@@ -34,6 +31,7 @@ btnValue.addEventListener('click', function () {
 })
 
 // 監聽F5
+let btnF5 = document.querySelector('.btn-f5')
 btnF5.addEventListener('click', function () {
     numText.innerText = '範圍：0 ~ 100'
     numInput.value = ''
@@ -43,19 +41,21 @@ btnF5.addEventListener('click', function () {
     imgBomber.style.display = 'none';
     sectionBomb.removeAttribute('class', 'bomber')
     sectionBomb.setAttribute('class', 'section-bomb')
-    let max = 100
-    let min = 0
+    max = 100
+    min = 0
     numValue = getRandomIntInclusive(min, max)
 
 
 })
 // 監聽清除
+const btnResult = document.querySelector('.btn-result')
 btnResult.addEventListener('click', function () {
     // numText.innerText = ''
     numInput.value = ''
 })
 
 // 監聽數字按鈕
+let btnNumber = document.querySelectorAll('.btn-number')
 btnNumber.forEach(element => {
     element.addEventListener('click', function () {
         numInput.value += element.innerHTML
