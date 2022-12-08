@@ -33,17 +33,18 @@ btnValue.addEventListener('click', function () {
 // 監聽F5
 let btnF5 = document.querySelector('.btn-f5')
 btnF5.addEventListener('click', function () {
-    numText.innerText = '範圍：0 ~ 100'
-    numInput.value = ''
-    light.removeAttribute('class', 'danger')
-    light.setAttribute('class', 'light')
-    imgBomb.style.display = 'block';
-    imgBomber.style.display = 'none';
-    sectionBomb.removeAttribute('class', 'bomber')
-    sectionBomb.setAttribute('class', 'section-bomb')
-    max = 100
-    min = 0
-    numValue = getRandomIntInclusive(min, max)
+    history.go(0)
+    // numText.innerText = '範圍：0 ~ 100'
+    // numInput.value = ''
+    // light.removeAttribute('class', 'danger')
+    // light.setAttribute('class', 'light')
+    // imgBomb.style.display = 'block';
+    // imgBomber.style.display = 'none';
+    // sectionBomb.removeAttribute('class', 'bomber')
+    // sectionBomb.setAttribute('class', 'section-bomb')
+    // max = 100
+    // min = 0
+    // numValue = getRandomIntInclusive(min, max)
 
 
 })
