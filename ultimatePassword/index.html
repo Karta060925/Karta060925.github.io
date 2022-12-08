@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終極密碼</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../Whoscall/CSS-Result.css">
+    <link rel="stylesheet" href="./password-css.css">
+
+</head>
+
+<body>
+    <!--
+        區間介於 0 ~ 100 ， 隨機產生
+        輸入數字不再目前區間的話要跳提示
+        輸入不為數字的時候 要提示
+        答對跳提示 
+    -->
+
+    <!-- 背景區塊 -->
+    <section class="section-bomb">
+        <div class="bomb">
+            <div class="light"></div>
+            <div class="line"></div>
+            <div class="pic">
+                <button class="value">
+                    <img class="img-bomb" src="../ultimatePassword/img/bomb.jpg" alt="">
+                    <img class="img-bomber" src="../ultimatePassword/img/bomber.jpg" alt="">
+                </button>
+
+                <span></span>
+                <p>範圍：0 ~ 100</p>
+            </div>
+
+            <div class="keyboard">
+
+                <div class="input-item">
+                    <input type="text" id="num" class="num-input" placeholder="">
+                    <button class="btn btn-f5">result</button>
+                    <button class="btn btn-result">x</button>
+                </div>
+
+                <div class="btn-item">
+
+                    <div class="btn-box">
+                        <button class="btn btn-number">0</button>
+                        <button class="btn btn-number">1</button>
+                        <button class="btn btn-number">2</button>
+                        <button class="btn btn-number">3</button>
+                        <button class="btn btn-number">4</button>
+                        <button class="btn btn-number">5</button>
+                        <button class="btn btn-number">6</button>
+                        <button class="btn btn-number">7</button>
+                        <button class="btn btn-number">8</button>
+                        <button class="btn btn-number">9</button>
+                    </div>
+
+                    <div class="enter-item">
+                        <!-- <button class="btn btn-f5">Result</button> -->
+                        <button class="btn btn-enter">Enter</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <label for="num">請輸入數字</label>
+    <input type="text" id="num" class="num-input" placeholder="">
+    <span></span>
+    <button class="btn">猜</button>
+    <button class="value">解答</button>
+    <p>0 ~ 100</p> -->
+
+    <script src="./password-js.js"></script>
+
+</body>
+
+</html>
