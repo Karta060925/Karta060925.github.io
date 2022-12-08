@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.section-advantage {
+    width: 100%;
+    padding: 60px 0;
+}
+
+.section-advantage .advantage-body {
+    width: 960px;
+    margin: auto;
+}
+
+.section-advantage .advantage-body .item {
+    position: relative;
+}
+
+.section-advantage .advantage-body .item .text-title {
+    color: #fff;
+    width: 340px;
+    background: url('./img/dot.jpg') repeat center center/ cover scroll;
+    background-color: #000;
+    background-size: 15px;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+}
+
+.section-advantage .advantage-body .item .text-title .title {
+    background-color: #bb0404;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.section-advantage .advantage-body .item .text-title h3 {
+    font-size: 50px;
+    font-weight: lighter;
+    padding-left: 30px;
+}
+
+.section-advantage .advantage-body .item .text-title .title span {
+    font-size: 120px;
+    writing-mode: vertical-lr;
+    line-height: 90px;
+}
+
+.section-advantage .advantage-body .item .text-title .title-content {
+    padding: 20px;
+}
+
+.section-advantage .advantage-body .item .text-title h4 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.section-advantage .advantage-body .item .text-title p {
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.3;
+    padding-bottom: 30px;
+    letter-spacing: 4px;
+}
+
+.section-advantage .advantage-body .item .pic {
+    width: 67.5%;
+    margin-left: auto;
+    padding: 135px 0 250px;
+    margin-right: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-advantage .advantage-body .item .pic img {
+    position: relative;
+    z-index: 3;
+}
+
+.section-advantage .advantage-body .item .pic::before {
+    content: '';
+    width: 400px;
+    height: 300px;
+    background: #f4f4f4;
+    position: absolute;
+    top: 45px;
+    right: -80px;
+    z-index: 1;
+}
+
+.section-advantage .advantage-body .text-content {
+    background: #eeeeee;
+    width: 70%;
+    z-index: 5;
+    bottom: 20px;
+    margin: 0 auto 0 0;
+    margin-left: 60px;
+    padding: 20px 25px;
+    position: absolute;
+    bottom: 0;
+}
+
+.section-advantage .advantage-body .text-content .content-title {
+    color: #bb0404;
+    position: relative;
+    font-weight: bolder;
+}
+
+.section-advantage .advantage-body .text-content .content-title::before {
+    content: '';
+    width: 73%;
+    height: 1px;
+    background: #bb0404;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+
+}
+
+.section-advantage .advantage-body .text-content h5 {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    padding: 5px 10px 3px;
+    font-weight: lighter;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.section-advantage .advantage-body .text-content .dot {
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+    line-height: 1.2;
+    font-size: 15px;
+}
+
+.section-advantage .advantage-body .text-content .dot::after {
+    content: '•';
+    color: #bb0404;
+    position: absolute;
+    left: 15px;
+    top: 0;
+}

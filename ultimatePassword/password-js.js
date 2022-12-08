@@ -43,13 +43,15 @@ btnF5.addEventListener('click', function () {
     imgBomber.style.display = 'none';
     sectionBomb.removeAttribute('class', 'bomber')
     sectionBomb.setAttribute('class', 'section-bomb')
+    let max = 100
+    let min = 0
     numValue = getRandomIntInclusive(min, max)
 
 
 })
 // 監聽清除
 btnResult.addEventListener('click', function () {
-    numText.innerText = ''
+    // numText.innerText = ''
     numInput.value = ''
 })
 
@@ -70,10 +72,12 @@ btnClick.addEventListener('click', function () {
     // 判斷輸入是否是數字
     if (isNaN(isParseInt)) {
         warnText.innerText = '你輸入的不是數字'
+        numInput.value = ''
     }
     else {
         // 判斷書輸入的值範圍
         if (numInputValue == numValue) {
+            warnText.innerText = ''
             light.setAttribute('class', 'light danger')
             imgBomb.style.display = 'none';
             imgBomber.style.display = 'block';
@@ -83,14 +87,18 @@ btnClick.addEventListener('click', function () {
         else if (numInputValue < numValue && numInputValue > min) {
             min = numInputValue
             numText.innerText = `${min} ~ ${max}`
+            numInput.value = ''
         }
         else if (numInputValue > numValue && numInputValue < max) {
             max = numInputValue
             numText.innerText = `${min} ~ ${max}`
+            numInput.value = ''
         }
         else {
-            warnText.innerText = '整數不再範圍內'
+            warnText.innerText = '數字不再範圍內'
             numText.innerText = `${min} ~ ${max}`
+            numInput.value = ''
+
         }
     }
 })
