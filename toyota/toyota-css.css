@@ -9,6 +9,7 @@ img {
 
 .section-advantage {
     width: 100%;
+    margin-top: 80px;
     padding: 60px 0;
 }
 
@@ -26,12 +27,12 @@ img {
 
 .section-advantage .advantage-body .item::before {
     content: '';
-    width: 440px;
+    width: 435px;
     height: 280px;
     background: #f4f4f4;
     position: absolute;
-    top: 45px;
-    right: -82px;
+    top: 135px;
+    right: 0;
     z-index: 1;
 }
 
@@ -41,7 +42,7 @@ img {
     height: 440px;
     background: #f4f4f4;
     position: absolute;
-    top: 40px;
+    top: 130px;
     right: 170px;
     z-index: 1;
 }
@@ -153,17 +154,6 @@ img {
     z-index: 3;
 }
 
-/* .section-advantage .advantage-body .item .pic::before {
-    content: '';
-    width: 440px;
-    height: 300px;
-    background: #f4f4f4;
-    position: absolute;
-    top: 45px;
-    right: -82px;
-    z-index: 1;
-} */
-
 .section-advantage .advantage-body .item .text-content {
     background: #eeeeee;
     width: 71%;
@@ -188,17 +178,6 @@ img {
     padding-right: 8px;
 }
 
-/* .section-advantage .advantage-body .text-content .content-title::before {
-    content: '';
-    width: 70%;
-    height: 1px;
-    background: #bb0404;
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    top: 50%;
-
-} */
 .section-advantage .advantage-body .text-content .content-title-box {
     display: flex;
     align-items: center;
@@ -223,31 +202,53 @@ img {
     border-radius: 3px;
 }
 
-.section-advantage .advantage-body .text-content .content-p {
-    display: flex;
-}
-
-.section-advantage .advantage-body .text-content span {
-    color: #bb0404;
-    padding: 2px 5px 0 15px;
-    /* padding-left: 15px;
-    padding-right: 5px;
-    padding-top: 2px; */
-}
-
 .section-advantage .advantage-body .text-content .dot {
-    /* padding-left: 25px; */
     position: relative;
     color: #666;
     line-height: 1.2;
-    font-size: 15px;
+    font-size: 16px;
+    margin-left: 31px;
 }
 
-/* .section-advantage .advantage-body .text-content .dot::before {
-    content: '•';
+.section-advantage .advantage-body .text-content .dot::before {
+    content: "▪";
     color: #bb0404;
+    font-weight: bold;
+    display: inline-block;
+    width: 11px;
+    margin-left: -10px;
+}
 
-    position: absolute;
-    left: 15px;
-    top: 0;
+#first {
+    padding-top: 90px;
+}
+
+#second,
+#third,
+#fourth,
+#fifth {
+    padding-top: 110px;
+    margin-top: -110px;
+}
+
+/* ul li版本 */
+/* ul {
+    list-style: none;
+}
+
+li {
+    padding-left: 0px;
+    margin-left: 31px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #666;
+}
+
+ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 11px;
+    margin-left: -1rem;
 } */
