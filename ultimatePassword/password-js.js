@@ -89,11 +89,15 @@ btnClick.addEventListener('click', function () {
             min = numInputValue
             numText.innerText = `${min} ~ ${max}`
             numInput.value = ''
+            warnText.innerText = ''
+
         }
         else if (numInputValue > numValue && numInputValue < max) {
             max = numInputValue
             numText.innerText = `${min} ~ ${max}`
             numInput.value = ''
+            warnText.innerText = ''
+
         }
         else {
             warnText.innerText = '數字不再範圍內'
