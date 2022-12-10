@@ -6,6 +6,8 @@ const btnValue = document.querySelector('.value')
 const numText = document.querySelector('p')
 
 const light = document.querySelector('.light')
+const line = document.querySelector('.line')
+const again = document.querySelector('.again')
 
 const imgSafe = document.querySelector('.img-safe')
 const imgBomb_0 = document.querySelector('.img-bomb-0')
@@ -16,6 +18,7 @@ const imgBomb_4 = document.querySelector('.img-bomb-4')
 const imgBomb_5 = document.querySelector('.img-bomb-5')
 const imgBomb_6 = document.querySelector('.img-bomb-6')
 
+const keyboard = document.querySelector('.keyboard')
 const imgBomber = document.querySelector('.img-bomber')
 const targetBlank = document.querySelector('.target-blank')
 let sectionBomb = document.querySelector('.section-bomb')
@@ -88,6 +91,13 @@ btnClick.addEventListener('click', function () {
         imgBomb_6.style.display = 'none';
         imgBomber.style.display = 'block';
         sectionBomb.setAttribute('class', 'section-bomb bomber')
+        keyboard.style.display = 'none';
+        light.style.display = 'none';
+        line.style.display = 'none';
+        numText.style.display = 'none';
+        numInput.style.display = 'none';
+        warnText.style.display = 'none';
+        again.style.display = 'inline-block';
     }
     else if (errorCount == 6) {
         imgBomb_5.style.display = 'none';
@@ -106,17 +116,14 @@ btnClick.addEventListener('click', function () {
     else if (errorCount == 3) {
         imgBomb_2.style.display = 'none';
         imgBomb_3.style.display = 'block';
-
     }
     else if (errorCount == 2) {
         imgBomb_1.style.display = 'none';
         imgBomb_2.style.display = 'block';
-
     }
     else if (errorCount == 1) {
         imgBomb_0.style.display = 'none';
         imgBomb_1.style.display = 'block';
-
     }
 
     // 判斷輸入是否是數字
@@ -128,7 +135,6 @@ btnClick.addEventListener('click', function () {
         // 判斷輸入的值範圍
         if (isParseInt == numValue) {
             warnText.innerText = ''
-            // light.setAttribute('class', 'light danger')
             imgBomb_0.style.display = 'none';
             imgBomb_1.style.display = 'none';
             imgBomb_2.style.display = 'none';
@@ -139,9 +145,7 @@ btnClick.addEventListener('click', function () {
             imgSafe.style.display = 'block';
 
             light.style.background = 'linear-gradient(117deg, rgba(123, 216, 96, 1) 39.2%, rgba(255, 255, 255, 1) 156.2%)';
-            // imgBomber.style.display = 'block';
             targetBlank.style.display = 'inline-block';
-            // sectionBomb.setAttribute('class', 'section-bomb bomber')
             numText.innerText = `恭喜你猜對了，答案是 ${numValue}`
             numText.style.color = '#00dc7f';
         }
@@ -150,28 +154,18 @@ btnClick.addEventListener('click', function () {
             numText.innerText = `${min} ~ ${max}`
             numInput.value = ''
             warnText.innerText = ''
-
-
         }
         else if (isParseInt > numValue && isParseInt < max) {
             max = isParseInt
             numText.innerText = `${min} ~ ${max}`
             numInput.value = ''
             warnText.innerText = ''
-
         }
         else {
             warnText.innerText = '數字不再範圍內'
             numText.innerText = `${min} ~ ${max}`
             numInput.value = ''
-
         }
     }
-
-
-
-
-
-
 })
 
