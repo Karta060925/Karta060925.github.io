@@ -138,7 +138,7 @@ btnClick.addEventListener('click', function () {
             imgBomb_6.style.display = 'none';
             imgSafe.style.display = 'block';
 
-            // light.style.background = 'radial-gradient(circle farthest-corner at 10% 20%, rgba(247, 87, 0, 1) 0%, rgba(249, 0, 0, 1) 90.1%)';
+            light.style.background = 'linear-gradient(117deg, rgba(123, 216, 96, 1) 39.2%, rgba(255, 255, 255, 1) 156.2%)';
             // imgBomber.style.display = 'block';
             targetBlank.style.display = 'inline-block';
             // sectionBomb.setAttribute('class', 'section-bomb bomber')
