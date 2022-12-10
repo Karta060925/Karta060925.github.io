@@ -1,6 +1,6 @@
 
 const numInput = document.querySelector('.num-input')
-const warnText = document.querySelector('span')
+const warnText = document.querySelector('.warn-text')
 const btnClick = document.querySelector('.btn-enter')
 const btnValue = document.querySelector('.value')
 const numText = document.querySelector('p')
@@ -9,6 +9,7 @@ let light = document.querySelector('.light')
 
 const imgBomb = document.querySelector('.img-bomb')
 const imgBomber = document.querySelector('.img-bomber')
+const targetBlank = document.querySelector('.target-blank')
 let sectionBomb = document.querySelector('.section-bomb')
 
 let num = numInput.value.text
@@ -82,6 +83,7 @@ btnClick.addEventListener('click', function () {
             light.setAttribute('class', 'light danger')
             imgBomb.style.display = 'none';
             imgBomber.style.display = 'block';
+            targetBlank.style.display = 'inline-block';
             sectionBomb.setAttribute('class', 'section-bomb bomber')
             numText.innerText = `恭喜你猜對了，答案是 ${numValue}`
         }
