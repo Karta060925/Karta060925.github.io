@@ -76,8 +76,8 @@ btnClick.addEventListener('click', function () {
         numInput.value = ''
     }
     else {
-        // 判斷書輸入的值範圍
-        if (numInputValue == numValue) {
+        // 判斷輸入的值範圍
+        if (isParseInt == numValue) {
             warnText.innerText = ''
             light.setAttribute('class', 'light danger')
             imgBomb.style.display = 'none';
@@ -85,15 +85,15 @@ btnClick.addEventListener('click', function () {
             sectionBomb.setAttribute('class', 'section-bomb bomber')
             numText.innerText = `恭喜你猜對了，答案是 ${numValue}`
         }
-        else if (numInputValue < numValue && numInputValue > min) {
-            min = numInputValue
+        else if (isParseInt < numValue && isParseInt > min) {
+            min = isParseInt
             numText.innerText = `${min} ~ ${max}`
             numInput.value = ''
             warnText.innerText = ''
 
         }
-        else if (numInputValue > numValue && numInputValue < max) {
-            max = numInputValue
+        else if (isParseInt > numValue && isParseInt < max) {
+            max = isParseInt
             numText.innerText = `${min} ~ ${max}`
             numInput.value = ''
             warnText.innerText = ''
