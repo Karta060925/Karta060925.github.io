@@ -47,19 +47,9 @@ btnValue.addEventListener('click', function () {
 let btnF5 = document.querySelector('.btn-f5')
 btnF5.addEventListener('click', function () {
     history.go(0)
-    // numText.innerText = '範圍：0 ~ 100'
-    // numInput.value = ''
-    // light.removeAttribute('class', 'danger')
-    // light.setAttribute('class', 'light')
-    // imgBomb.style.display = 'block';
-    // imgBomber.style.display = 'none';
-    // sectionBomb.removeAttribute('class', 'bomber')
-    // sectionBomb.setAttribute('class', 'section-bomb')
-    // max = 100
-    // min = 0
-    // numValue = getRandomIntInclusive(min, max)
-
-
+})
+again.addEventListener('click', function () {
+    history.go(0)
 })
 // 監聽清除
 const btnResult = document.querySelector('.btn-result')
