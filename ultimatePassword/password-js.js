@@ -77,7 +77,7 @@ btnClick.addEventListener('click', function () {
     // 限定猜的次數
     errorCount++
 
-    if (errorCount > 6) {
+    if (errorCount > 6 && isParseInt != numValue) {
         imgBomb_6.style.display = 'none';
         imgBomber.style.display = 'block';
         sectionBomb.setAttribute('class', 'section-bomb bomber')
