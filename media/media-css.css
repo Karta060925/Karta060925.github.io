@@ -1,0 +1,136 @@
+:root {}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif, 'Noto Sans TC', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    margin: 120px auto;
+}
+
+.container {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 100%;
+    /* padding: 20px; */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+    margin: 0 20px 20px;
+}
+
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item .pic {
+    width: 50%;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    min-height: 240px;
+    max-width: 350px;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 5px 0 0 5px;
+}
+
+.item .text {
+    width: 50%;
+    padding: 8px 15px;
+}
+
+.item .text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.2;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+}
+
+@media screen and (min-width: 768px) {
+    .col {
+        width: calc(100% / 3 - 30px);
+        margin: 15px;
+    }
+
+    .item {
+        flex-direction: column;
+    }
+
+    .item .pic,
+    .item .text {
+        width: 100%;
+    }
+
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .col {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .item {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .col:nth-child(n+3):nth-last-child(n) {
+        width: calc(100% / 4 - 30px);
+    }
+
+    .col:nth-child(n+3):nth-last-child(n) .item {
+        position: relative;
+        z-index: 1;
+    }
+
+    .col:nth-child(n+3):nth-last-child(n) .item .text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        background: #00000086;
+        display: flex;
+    }
+
+    .col:nth-child(n+3):nth-last-child(n) .item .text p {
+        color: #fff;
+        margin: auto;
+        letter-spacing: 2px;
+
+    }
+
+
+    .col:nth-child(n+3):nth-last-child(n) .item:hover .text {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .col:nth-child(n+3):nth-last-child(n) .item img {
+        border-radius: 5px;
+
+    }
+}
