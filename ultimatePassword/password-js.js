@@ -138,6 +138,15 @@ btnClick.addEventListener('click', function () {
             targetBlank.style.display = 'inline-block';
             numText.innerText = `恭喜你猜對了，答案是 ${numValue}`
             numText.style.color = '#00dc7f';
+
+            keyboard.style.display = 'none';
+            light.style.display = 'none';
+            line.style.display = 'none';
+            numText.style.display = 'none';
+            numInput.style.display = 'none';
+            warnText.style.display = 'none';
+            again.style.display = 'inline-block';
+
         }
         else if (isParseInt < numValue && isParseInt > min) {
             min = isParseInt
