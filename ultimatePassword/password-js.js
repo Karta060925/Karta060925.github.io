@@ -29,7 +29,7 @@ let max = 100
 let min = 0
 let errorCount = 0;
 
-// 產生隨機卵數
+// 產生隨機亂數
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -54,7 +54,6 @@ again.addEventListener('click', function () {
 // 監聽清除
 const btnResult = document.querySelector('.btn-result')
 btnResult.addEventListener('click', function () {
-    // numText.innerText = ''
     numInput.value = ''
 })
 
@@ -63,7 +62,6 @@ let btnNumber = document.querySelectorAll('.btn-number')
 btnNumber.forEach(element => {
     element.addEventListener('click', function () {
         numInput.value += element.innerHTML;
-
     })
 
 });

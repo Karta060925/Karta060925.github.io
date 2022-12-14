@@ -16,9 +16,11 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    margin: 0 10px;
 }
+
 
 h1 {
     font-size: 30px;
@@ -34,7 +36,7 @@ h1 a {
     text-decoration: none;
     color: #aaa;
     transition: all 0.3s ease-in-out;
-    padding-left: 10px;
+    padding-right: 10px;
     font-size: 20px;
 }
 
@@ -44,20 +46,17 @@ h1 a:hover {
 }
 
 .col {
-    width: 100%;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
-    margin: 0 10px 20px;
+    margin-bottom: 10px;
 }
 
 .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .item .pic {
-    width: 50%;
     overflow: hidden;
 }
 
@@ -70,7 +69,6 @@ h1 a:hover {
 }
 
 .item .text {
-    width: 50%;
     padding: 6px 15px;
     font-size: 16px;
     color: #666;
@@ -96,18 +94,18 @@ h1 a:hover {
 }
 
 @media screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+
+    }
+
     .col {
-        width: calc(100% / var(--col-count) - 30px);
-        margin: 15px;
+        margin: 10px;
     }
 
     .item {
-        flex-direction: column;
-    }
-
-    .item .pic,
-    .item .text {
-        width: 100%;
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
     }
 
     .item .pic img {
@@ -117,23 +115,49 @@ h1 a:hover {
 }
 
 @media screen and (min-width: 1024px) {
-    .col {
-        --col-count: 2;
-        /* width: calc(100% / 2 - 30px); */
+    .container {
+        grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+        grid-template-areas:
+            'A A B B'
+            'C D E F';
+    }
+
+    .col:nth-child(1) {
+        grid-area: A;
+    }
+
+    .col:nth-child(2) {
+        grid-area: B;
+
+    }
+
+    .col:nth-child(3) {
+        grid-area: C;
+    }
+
+    .col:nth-child(4) {
+        grid-area: D;
+    }
+
+    .col:nth-child(5) {
+        grid-area: E;
+    }
+
+    .col:nth-child(6) {
+        grid-area: F;
     }
 
     .item {
-        flex-direction: row;
-        position: relative;
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
     }
 
     .item .pic img {
         border-radius: 5px 0 0 5px;
     }
 
-    .col:nth-child(n+3):nth-last-child(n) {
-        --col-count: 4;
-        /* width: calc(100% / 4 - 30px); */
+    .col:nth-child(-n+2) .item {
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr);
     }
 
     .col:nth-child(n+3):nth-last-child(n) .item {
