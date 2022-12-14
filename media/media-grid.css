@@ -54,6 +54,8 @@ h1 a:hover {
 .item {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 5px;
 }
 
 .item .pic {
@@ -128,7 +130,6 @@ h1 a:hover {
 
     .col:nth-child(2) {
         grid-area: B;
-
     }
 
     .col:nth-child(3) {
@@ -150,6 +151,7 @@ h1 a:hover {
     .item {
         display: grid;
         grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+
     }
 
     .item .pic img {

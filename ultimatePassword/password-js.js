@@ -9,15 +9,8 @@ const light = document.querySelector('.light')
 const line = document.querySelector('.line')
 const again = document.querySelector('.again')
 
+const imgBomb = document.querySelector('.img-bomb')
 const imgSafe = document.querySelector('.img-safe')
-const imgBomb_0 = document.querySelector('.img-bomb-0')
-const imgBomb_1 = document.querySelector('.img-bomb-1')
-const imgBomb_2 = document.querySelector('.img-bomb-2')
-const imgBomb_3 = document.querySelector('.img-bomb-3')
-const imgBomb_4 = document.querySelector('.img-bomb-4')
-const imgBomb_5 = document.querySelector('.img-bomb-5')
-const imgBomb_6 = document.querySelector('.img-bomb-6')
-
 const keyboard = document.querySelector('.keyboard')
 const imgBomber = document.querySelector('.img-bomber')
 const targetBlank = document.querySelector('.target-blank')
@@ -76,7 +69,9 @@ btnClick.addEventListener('click', function () {
     errorCount++
 
     if (errorCount > 6 && isParseInt != numValue) {
-        imgBomb_6.style.display = 'none';
+        imgBomb.style.display = 'none';
+
+        // imgBomb_6.style.display = 'none';
         imgBomber.style.display = 'block';
         sectionBomb.setAttribute('class', 'section-bomb bomber')
         keyboard.style.display = 'none';
@@ -88,30 +83,24 @@ btnClick.addEventListener('click', function () {
         again.style.display = 'inline-block';
     }
     else if (errorCount == 6) {
-        imgBomb_5.style.display = 'none';
-        imgBomb_6.style.display = 'block';
+        imgBomb.setAttribute('src', '../ultimatePassword/img/bomb-6.png');
         light.style.background = 'radial-gradient(circle farthest-corner at 10% 20%, rgba(247, 87, 0, 1) 0%, rgba(249, 0, 0, 1) 90.1%)';
     }
     else if (errorCount == 5) {
-        imgBomb_4.style.display = 'none';
-        imgBomb_5.style.display = 'block';
+        imgBomb.setAttribute('src', '../ultimatePassword/img/bomb-5.png');
     }
     else if (errorCount == 4) {
-        imgBomb_3.style.display = 'none';
-        imgBomb_4.style.display = 'block';
+        imgBomb.setAttribute('src', '../ultimatePassword/img/bomb-4.png');
         light.style.background = 'linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% )';
     }
     else if (errorCount == 3) {
-        imgBomb_2.style.display = 'none';
-        imgBomb_3.style.display = 'block';
+        imgBomb.setAttribute('src', '../ultimatePassword/img/bomb-3.png');
     }
     else if (errorCount == 2) {
-        imgBomb_1.style.display = 'none';
-        imgBomb_2.style.display = 'block';
+        imgBomb.setAttribute('src', '../ultimatePassword/img/bomb-2.png');
     }
     else if (errorCount == 1) {
-        imgBomb_0.style.display = 'none';
-        imgBomb_1.style.display = 'block';
+        imgBomb.setAttribute('src', '../ultimatePassword/img/bomb-1.png');
     }
 
     // 判斷輸入是否是數字
@@ -123,13 +112,7 @@ btnClick.addEventListener('click', function () {
         // 判斷輸入的值範圍
         if (isParseInt == numValue) {
             warnText.innerText = ''
-            imgBomb_0.style.display = 'none';
-            imgBomb_1.style.display = 'none';
-            imgBomb_2.style.display = 'none';
-            imgBomb_3.style.display = 'none';
-            imgBomb_4.style.display = 'none';
-            imgBomb_5.style.display = 'none';
-            imgBomb_6.style.display = 'none';
+            imgBomb.style.display = 'none';
             imgSafe.style.display = 'block';
 
             light.style.background = 'linear-gradient(117deg, rgba(123, 216, 96, 1) 39.2%, rgba(255, 255, 255, 1) 156.2%)';
