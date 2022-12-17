@@ -35,8 +35,11 @@
     border-radius: 25px;
     box-shadow: 0 2px 5px rgb(0 0 0 / 80%);
     margin-bottom: 20px;
-    overflow: hidden;
     margin: 0 1.5% 20px;
+}
+
+.homework-list .item .pic {
+    overflow: hidden;
 }
 
 .homework-list .item a {
