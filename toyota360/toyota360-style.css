@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+h1 {
+    position: absolute;
+    top: 160px;
+    font-size: 40px;
+    color: #444;
+    font-weight: 500;
+}
+
+.color-name {
+    display: block;
+    position: absolute;
+    bottom: 200px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0.6), rgb(255, 255, 255));
+    color: rgb(255, 255, 255);
+    font-size: 1.125rem;
+    width: 460px;
+    padding: 0.8rem 0px;
+    margin: auto;
+}
+
+.item {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* box-shadow: 0px 2px 0.5rem #00000060; */
+    padding: 60px 0;
+    border-radius: 5px;
+}
+
+.pic {
+    flex-grow: 1;
+}
+
+button {
+    height: calc(100vh - 120px);
+    width: 60px;
+    outline: none;
+    border: none;
+    /* border-radius: 50%; */
+    background-color: #fff;
+    color: #ccc;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+button i {
+    transition: all 0.2s ease;
+}
+
+button:hover i {
+    /* filter: drop-shadow(0px 5px 5px #00000041); */
+    color: #aaa;
+    transform: scale(1.2);
+
+}
+
+button:active i {
+    filter: drop-shadow(0px 2px 1px #26262677);
+    color: #ccc;
+    transform: scale(1.1);
+
+}
+
+.pic img {
+    width: 100%;
+}
+
+.dot-item {
+    position: absolute;
+    bottom: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.dot-item div+div {
+    margin-left: 20px;
+}
+
+.dot-item img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.dot-item div.active {
+    outline: 4px solid #fff;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.918);
+    /* : 4px solid#fff; */
+}
+
+.dot-item div {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.548);
+    transition: all 0.3s ease-in-out;
+}
+
+.dot-item div:hover {
+    opacity: 0.8;
+}

@@ -193,9 +193,9 @@ body {
         height: 0; */
     }
 
-    #second1:checked+.dropdown-item,
-    #second2:checked+.dropdown-item,
-    #second3:checked+.dropdown-item,
+    #second1:checked+.first-nav>.dropdown-item,
+    #second2:checked+.first-nav>.dropdown-item,
+    #second3:checked+.first-nav>.dropdown-item,
     #third1:checked+.second-dropdown-item {
         display: block;
     }
@@ -221,9 +221,6 @@ body {
         background: #777;
         margin-bottom: 1px;
     }
-
-
-
 
     .second-dropdown-item {}
 
@@ -386,6 +383,8 @@ body {
         padding: 20px 0;
         border: 1px solid #ddd;
         transition: all 0.3s ease;
+        background-color: #fff;
+
     }
 
     .second-dropdown-item:after {
