@@ -20,15 +20,8 @@ window.onload = function () {
     // 呼叫 GenCarArray
     GenCarArray();
 
-    let btnLeft = document.querySelector('.btn-left');
-    let x = 0;
-
-
-    let tid;
-
-
-
-
+    let x = 0; // 索引
+    let time;
 
     // 左鍵
     btnLeft.addEventListener('click', function () {
@@ -41,6 +34,7 @@ window.onload = function () {
         }
         img.setAttribute('src', carArray[x]);
 
+        // 連續觸發
         btnLeft.onmousedown = function (e) {
             time = setInterval(function () {
 
@@ -75,6 +69,7 @@ window.onload = function () {
         img.setAttribute('src', carArray[x]);
 
 
+        // 連續觸發
         btnRight.onmousedown = function (e) {
             time = setInterval(function () {
                 if (x == 0) {
@@ -95,6 +90,7 @@ window.onload = function () {
     });
 
 
+    // 換顏色
     dotBlueGray.addEventListener('click', function () {
         color = 18;
         carArray = [];
@@ -145,15 +141,9 @@ window.onload = function () {
     });
 }
 
-// GenCarArray 方法 讀取60張圖片
+// GenCarArray 方法 讀取圖片
 function GenCarArray() {
     if (color == 18) {
-        for (let x = 1; x <= 60; x++) {
-
-            let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
-            // push 存入 carArray 陣列
-            carArray.push(urlTemplate);
-        }
         dotBlueGray.setAttribute('class', 'blueGray active');
         dotBlack.removeAttribute('class', 'black active');
         dotGray.removeAttribute('class', 'gray active');
@@ -162,12 +152,6 @@ function GenCarArray() {
         dotWhiteGray.removeAttribute('class', 'WhiteGray active');
     }
     else if (color == 19) {
-        for (let x = 1; x <= 60; x++) {
-
-            let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
-            // push 存入 carArray 陣列
-            carArray.push(urlTemplate);
-        }
         dotBlueGray.removeAttribute('class', 'blueGray active');
         dotBlack.setAttribute('class', 'black active');
         dotGray.removeAttribute('class', 'gray active');
@@ -176,12 +160,6 @@ function GenCarArray() {
         dotWhiteGray.removeAttribute('class', 'WhiteGray active');
     }
     else if (color == 20) {
-        for (let x = 1; x <= 60; x++) {
-
-            let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
-            // push 存入 carArray 陣列
-            carArray.push(urlTemplate);
-        }
         dotBlueGray.removeAttribute('class', 'blueGray active');
         dotBlack.removeAttribute('class', 'black active');
         dotGray.setAttribute('class', 'gray active');
@@ -190,12 +168,6 @@ function GenCarArray() {
         dotWhiteGray.removeAttribute('class', 'WhiteGray active');
     }
     else if (color == 21) {
-        for (let x = 1; x <= 60; x++) {
-
-            let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
-            // push 存入 carArray 陣列
-            carArray.push(urlTemplate);
-        }
         dotBlueGray.removeAttribute('class', 'blueGray active');
         dotBlack.removeAttribute('class', 'black active');
         dotGray.removeAttribute('class', 'gray active');
@@ -204,12 +176,6 @@ function GenCarArray() {
         dotWhiteGray.setAttribute('class', 'WhiteGray active');
     }
     else if (color == 22) {
-        for (let x = 1; x <= 60; x++) {
-
-            let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
-            // push 存入 carArray 陣列
-            carArray.push(urlTemplate);
-        }
         dotBlueGray.removeAttribute('class', 'blueGray active');
         dotBlack.removeAttribute('class', 'black active');
         dotGray.removeAttribute('class', 'gray active');
@@ -218,17 +184,17 @@ function GenCarArray() {
         dotWhiteGray.removeAttribute('class', 'WhiteGray active');
     }
     else if (color == 23) {
-        for (let x = 1; x <= 60; x++) {
-
-            let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
-            // push 存入 carArray 陣列
-            carArray.push(urlTemplate);
-        }
         dotBlueGray.removeAttribute('class', 'blueGray active');
         dotBlack.removeAttribute('class', 'black active');
         dotGray.removeAttribute('class', 'gray active');
         dotRed.removeAttribute('class', 'red active');
         dotWhite.setAttribute('class', 'White active');
         dotWhiteGray.removeAttribute('class', 'WhiteGray active');
+    }
+    for (let x = 1; x <= 60; x++) {
+
+        let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
+        // push 存入 carArray 陣列
+        carArray.push(urlTemplate);
     }
 }
