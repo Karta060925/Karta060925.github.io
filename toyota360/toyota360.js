@@ -244,7 +244,8 @@ function GenCarArray() {
     }
     for (let x = 1; x <= 60; x++) {
 
-        let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
+        // let urlTemplate = `https://hotaicdn.azureedge.net/toyotaweb/360EXT_1_${color}_${x}.png`;
+        let urlTemplate = `./img/toyota-img/360EXT_1_${color}_${x}.png`;
         // push 存入 carArray 陣列
         carArray.push(urlTemplate);
     }
