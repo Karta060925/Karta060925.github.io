@@ -12,8 +12,16 @@ let dotRed = document.querySelector('.red');
 let dotWhite = document.querySelector('.white');
 let dotWhiteGray = document.querySelector('.whiteGray');
 let colorName = document.querySelector('.color-name');
+let range = document.querySelector('input');
 
 let color = 18;
+
+let rangeBool = false;
+let min = 0;
+
+const num = 1;
+
+
 
 window.onload = function () {
 
@@ -87,6 +95,49 @@ window.onload = function () {
         btnRight.onmouseout = function (e) {
             clearInterval(time);
         }
+    });
+
+
+    // 拖移旋轉 判斷滑鼠
+    function rotatePole(e) {
+
+        let isParseInt = parseInt(range.value, 10)
+
+        // 右轉
+        if (isParseInt > 2) {
+            if (rangeBool) {
+                (e.range > 0) ? min += num : min -= num;
+                if (x == 0) {
+                    x = 59;
+                }
+                else {
+                    x--;
+                }
+
+                img.setAttribute('src', carArray[x]);
+            }
+
+        }
+        // 左轉
+        if (isParseInt < 2) {
+            if (rangeBool) {
+                (e.range > 0) ? min += num : min -= num;
+                if (x == 59) {
+                    x = 0;
+                }
+                else {
+                    x++;
+                }
+                img.setAttribute('src', carArray[x]);
+            }
+        }
+    }
+    range.addEventListener('mousemove', rotatePole);
+    window.addEventListener('mousedown', function () {
+        return rangeBool = true;
+    });
+    window.addEventListener('mouseup', function () {
+        return rangeBool = false;
     });
 
 
