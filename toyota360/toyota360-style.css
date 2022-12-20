@@ -4,41 +4,44 @@
 
 body {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    padding: 100px 0;
+
 }
 
 h1 {
-    position: absolute;
-    top: 100px;
+    /* position: absolute;
+    top: 100px; */
     font-size: 40px;
     color: #444;
     font-weight: 500;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .color-name {
     display: block;
-    position: absolute;
-    bottom: 200px;
+    /* position: absolute;
+    bottom: 200px; */
     text-align: center;
     background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0.6), rgb(255, 255, 255));
     color: rgb(255, 255, 255);
     font-size: 1.125rem;
     width: 460px;
-    padding: 0.8rem 0px;
-    margin: auto;
+    padding: 1rem 0px;
+    margin: 0 auto 40px;
 }
 
 .item {
-    width: 1400px;
+    width: 1200px;
+    /* min-width: 960px; */
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 20px 0 100px;
+    /* padding: 20px 0 100px; */
     border-radius: 5px;
 }
 
@@ -47,8 +50,14 @@ h1 {
     flex-grow: 1;
 }
 
+.pic img {
+    width: 100%;
+}
+
+
+/* .left, :right{}  */
 button {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 504px);
     width: 60px;
     outline: none;
     border: none;
@@ -81,10 +90,12 @@ button:active i {
 }
 
 .dot-item {
-    position: absolute;
-    bottom: 120px;
+    /* position: absolute;
+    bottom: 120px; */
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .dot-item div+div {
@@ -135,6 +146,7 @@ button:active i {
 }
 
 
+
 @media screen and (max-width:460px) {
     .item {
         flex-grow: 1;
@@ -158,5 +170,11 @@ button:active i {
 
     .dot-item div+div {
         margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .item {
+        width: 100%;
     }
 }
