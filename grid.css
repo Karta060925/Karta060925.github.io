@@ -3,13 +3,42 @@
     max-width: 1200px;
     margin: auto;
     padding: 0 var(--gap);
+    position: relative;
+    z-index: 2;
 }
+
 
 .row {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(var(--gap) * -1);
     margin-right: calc(var(--gap)* -1);
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+@media (min-width: 768px) {
+    .row-md-reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
 }
 
 /* class裡有 col- 的都會被選到 */
@@ -117,10 +146,13 @@
     .col-md-12 {
         width: 100%;
     }
+
+    .row-md-reverse {
+        flex-direction: row-reverse;
+    }
 }
 
-/* 平板橫向 */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
     .col-lg-1 {
         width: 8.33333333%;
     }
@@ -168,10 +200,14 @@
     .col-lg-12 {
         width: 100%;
     }
+
+    .row-lg-reverse {
+        flex-direction: row-reverse;
+    }
 }
 
-/* 桌機 */
-@media screen and (min-width: 1400px) {
+/* 平板橫向 */
+@media screen and (min-width: 1024px) {
     .col-xl-1 {
         width: 8.33333333%;
     }
@@ -218,6 +254,65 @@
 
     .col-xl-12 {
         width: 100%;
+    }
+
+    .row-xl-reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+/* 桌機 */
+@media screen and (min-width: 1400px) {
+    .col-xxl-1 {
+        width: 8.33333333%;
+    }
+
+    .col-xxl-2 {
+        width: 16.66666666%;
+    }
+
+    .col-xxl-3 {
+        width: 25%;
+    }
+
+    .col-xxl-4 {
+        width: 33.33333333%;
+    }
+
+    .col-xxl-5 {
+        width: 41.66666666%;
+    }
+
+    .col-xxl-6 {
+        width: 50%;
+    }
+
+    .col-xxl-7 {
+        width: 58.33333333%;
+    }
+
+    .col-xxl-8 {
+        width: 66.66666666%;
+    }
+
+    .col-xxl-9 {
+        width: 75%;
+    }
+
+    .col-xxl-10 {
+        width: 83.33333333%;
+    }
+
+    .col-xxl-11 {
+        width: 91.66666666%;
+    }
+
+    .col-xxl-12 {
+        width: 100%;
+    }
+
+    .row-xxl-reverse {
+        flex-direction: row-reverse;
     }
 }
 
@@ -273,7 +368,7 @@
 }
 
 /* 平板橫向 - 等寬 */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
     .row-cols-lg-1>.col {
         width: 100%;
     }
@@ -299,8 +394,8 @@
     }
 }
 
-/* 桌機 - 等寬*/
-@media screen and (min-width: 1400px) {
+/* 平板橫向 - 等寬 */
+@media screen and (min-width: 1024px) {
     .row-cols-xl-1>.col {
         width: 100%;
     }
@@ -322,6 +417,33 @@
     }
 
     .row-cols-xl-6>.col {
+        width: 16.66666666%;
+    }
+}
+
+/* 桌機 - 等寬*/
+@media screen and (min-width: 1400px) {
+    .row-cols-xxl-1>.col {
+        width: 100%;
+    }
+
+    .row-cols-xxl-2>.col {
+        width: 50%;
+    }
+
+    .row-cols-xxl-3>.col {
+        width: 33.33333333%;
+    }
+
+    .row-cols-xxl-4>.col {
+        width: 25%;
+    }
+
+    .row-cols-xxl-5>.col {
+        width: 20%;
+    }
+
+    .row-cols-xxl-6>.col {
         width: 16.66666666%;
     }
 }
@@ -371,7 +493,7 @@
 }
 
 /* 平板橫向 - 子層 flex 屬性 */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
     .justify-content-lg-center {
         justify-content: center;
     }
@@ -393,8 +515,8 @@
     }
 }
 
-/* 桌機 - 子層 flex 屬性*/
-@media screen and (min-width: 1400px) {
+/* 平板橫向 - 子層 flex 屬性 */
+@media screen and (min-width: 1024px) {
     .justify-content-xl-center {
         justify-content: center;
     }
@@ -413,5 +535,284 @@
 
     .justify-content-xl-around {
         justify-content: space-around;
+    }
+}
+
+/* 桌機 - 子層 flex 屬性*/
+@media screen and (min-width: 1400px) {
+    .justify-content-xxl-center {
+        justify-content: center;
+    }
+
+    .justify-content-xxl-start {
+        justify-content: flex-start;
+    }
+
+    .justify-content-xxl-end {
+        justify-content: flex-end;
+    }
+
+    .justify-content-xxl-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-xxl-around {
+        justify-content: space-around;
+    }
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+/* 平板直向 - 子層 flex 屬性*/
+@media screen and (min-width: 768px) {
+    .d-md-block {
+        display: block !important;
+    }
+
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+/* 平板橫向 - 子層 flex 屬性 */
+@media screen and (min-width: 992px) {
+    .d-lg-block {
+        display: block !important;
+    }
+
+    .d-lg-none {
+        display: none !important;
+    }
+}
+
+/* 平板橫向 - 子層 flex 屬性 */
+@media screen and (min-width: 1024px) {
+    .d-xl-block {
+        display: block !important;
+    }
+
+    .d-xl-none {
+        display: none !important;
+    }
+}
+
+/* 桌機 - 子層 flex 屬性*/
+@media screen and (min-width: 1400px) {
+    .d-xxl-block {
+        display: block !important;
+    }
+
+    .d-xxl-none {
+        display: none !important;
+    }
+
+}
+
+.order-first {
+    order: -1 !important;
+}
+
+.order-0 {
+    order: 0 !important;
+}
+
+.order-1 {
+    order: 1 !important;
+}
+
+.order-2 {
+    order: 2 !important;
+}
+
+.order-3 {
+    order: 3 !important;
+}
+
+.order-4 {
+    order: 4 !important;
+}
+
+.order-5 {
+    order: 5 !important;
+}
+
+.order-last {
+    order: 6 !important;
+}
+
+@media (min-width: 576px) {
+    .order-sm-first {
+        order: -1 !important;
+    }
+
+    .order-sm-0 {
+        order: 0 !important;
+    }
+
+    .order-sm-1 {
+        order: 1 !important;
+    }
+
+    .order-sm-2 {
+        order: 2 !important;
+    }
+
+    .order-sm-3 {
+        order: 3 !important;
+    }
+
+    .order-sm-4 {
+        order: 4 !important;
+    }
+
+    .order-sm-5 {
+        order: 5 !important;
+    }
+
+    .order-sm-last {
+        order: 6 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .order-md-first {
+        order: -1 !important;
+    }
+
+    .order-md-0 {
+        order: 0 !important;
+    }
+
+    .order-md-1 {
+        order: 1 !important;
+    }
+
+    .order-md-2 {
+        order: 2 !important;
+    }
+
+    .order-md-3 {
+        order: 3 !important;
+    }
+
+    .order-md-4 {
+        order: 4 !important;
+    }
+
+    .order-md-5 {
+        order: 5 !important;
+    }
+
+    .order-md-last {
+        order: 6 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .order-lg-first {
+        order: -1 !important;
+    }
+
+    .order-lg-0 {
+        order: 0 !important;
+    }
+
+    .order-lg-1 {
+        order: 1 !important;
+    }
+
+    .order-lg-2 {
+        order: 2 !important;
+    }
+
+    .order-lg-3 {
+        order: 3 !important;
+    }
+
+    .order-lg-4 {
+        order: 4 !important;
+    }
+
+    .order-lg-5 {
+        order: 5 !important;
+    }
+
+    .order-lg-last {
+        order: 6 !important;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .order-xl-first {
+        order: -1 !important;
+    }
+
+    .order-xl-0 {
+        order: 0 !important;
+    }
+
+    .order-xl-1 {
+        order: 1 !important;
+    }
+
+    .order-xl-2 {
+        order: 2 !important;
+    }
+
+    .order-xl-3 {
+        order: 3 !important;
+    }
+
+    .order-xl-4 {
+        order: 4 !important;
+    }
+
+    .order-xl-5 {
+        order: 5 !important;
+    }
+
+    .order-xl-last {
+        order: 6 !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .order-xxl-first {
+        order: -1 !important;
+    }
+
+    .order-xxl-0 {
+        order: 0 !important;
+    }
+
+    .order-xxl-1 {
+        order: 1 !important;
+    }
+
+    .order-xxl-2 {
+        order: 2 !important;
+    }
+
+    .order-xxl-3 {
+        order: 3 !important;
+    }
+
+    .order-xxl-4 {
+        order: 4 !important;
+    }
+
+    .order-xxl-5 {
+        order: 5 !important;
+    }
+
+    .order-xxl-last {
+        order: 6 !important;
     }
 }

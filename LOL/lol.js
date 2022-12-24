@@ -1,20 +1,16 @@
 // 英雄資料陣列
 let heroArray = [];
 let container;
-let resilt;
+let result;
 let btnCreateHeroArray, btnListHero, btnTableHero;
 let tbody;
 
 window.onload = function () {
-    // 選到 #container
+    // 選到 #container, 選到 btn 建立&清除, 選到btn 顯示文字, 選到btn 顯示表格, 選到 #result(顯示表格)
     container = document.querySelector("#container");
-    // 抓到 btn 建立&清除
     btnCreateHeroArray = document.getElementById("createhero");
-    // 抓到btn 顯示文字
     btnListHero = document.getElementById("listhero");
-    // 抓到btn 顯示表格
     btnTableHero = document.getElementById("tablehero");
-    // 抓到 #result(顯示表格)
     result = document.getElementById("result");
     tbody = document.querySelector('tbody');
 
@@ -22,7 +18,7 @@ window.onload = function () {
     btnCreateHeroArray.addEventListener("click", function () {
         alert("從DOM建立英雄人物陣列資料成功！");
 
-        // 抓到 #container 裡的 .card
+        // 選到 #container 裡的 .card
         let card = container.querySelectorAll('.card');
         card.forEach((data, index) => {
             // .card 裡的 .card-img-top(圖片)
@@ -63,7 +59,7 @@ window.onload = function () {
 
 
 
-    // btn 顯示表格
+    // btn 顯示表格 監聽
     btnTableHero.addEventListener("click", function () {
         if (heroArray.length == 0) {
             alert("請先建立陣列資料");
