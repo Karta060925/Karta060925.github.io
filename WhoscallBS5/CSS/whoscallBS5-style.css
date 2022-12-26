@@ -312,10 +312,7 @@ header .main-nav {
         justify-content: center;
     }
 
-    .section-banner::after,
-    .section-banner::before {
-        background-size: auto;
-    }
+
 
     .section-banner .banner-text h2 {
         font-size: 2rem;
@@ -345,11 +342,23 @@ header .main-nav {
     }
 
     .section-banner .banner-text h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .btn-plan {
+        text-align: start;
         margin-top: 60px;
+    }
+
+    .section-banner::after,
+    .section-banner::before {
+        background-size: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-banner .banner-text h2 {
+        font-size: 3rem;
     }
 }
 
@@ -987,9 +996,8 @@ header .main-nav {
     font-size: 18px;
     color: var(--main-secondary);
     line-height: 1.5;
+
 }
-
-
 
 .section-qa .accordion .accordion-item:last-child {
     border-bottom: 1px solid #888;
