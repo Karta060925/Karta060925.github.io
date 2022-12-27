@@ -565,14 +565,45 @@ nav .menu-btn {
 .choose .item p {
     font-size: 14px;
     line-height: 1.8;
+    text-align: center;
+}
+
+.choose .num-box {
+    position: relative;
+    text-align: center;
 }
 
 .choose .item span {
-    padding-left: 20px;
+    /* padding-left: 20px; */
     padding-bottom: 30px;
     display: inline-block;
     font-size: 2rem;
 }
+
+
+
+/* .choose .item .numscroller.first::before {
+    content: '+';
+    position: absolute;
+    right: 0;
+}
+
+.choose .item .numscroller.second::before {
+    content: '+';
+    position: absolute;
+    right: 0;
+}
+
+.choose .item .numscroller.fourth::before {
+    content: '%';
+    position: absolute;
+    right: 0;
+} */
+
+/* .choose .item span.num {
+    position: absolute;
+    right: 40px;
+} */
 
 
 .choose .text {
@@ -607,16 +638,21 @@ nav .menu-btn {
 }
 
 @media (min-width: 992px) {
+    .choose .num-box {
+        position: relative;
+        text-align: start;
+    }
+
     .choose .item span {
-        text-align: center;
+        text-align: start;
         font-size: 2rem;
-        display: block;
+        display: inline-block;
         padding-left: 0;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
 
     .choose .item p {
-        text-align: center;
+        text-align: start;
     }
 
 }

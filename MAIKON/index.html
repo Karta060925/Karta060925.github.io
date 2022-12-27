@@ -247,25 +247,45 @@
                     <div class="row ">
                         <div class="col-12 col-md-6 mb-3">
                             <div class="item">
-                                <span>1880+</span>
+                                <!-- <span>1880+</span> -->
+                                <div class="num-box">
+                                    <span class='numscroller first' data-min='1' data-max='1880' data-delay='5'
+                                        data-increment='10'>1880</span><span class="num">+</span>
+                                </div>
+
                                 <p>Completed projects to the end by our specialists.</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
                             <div class="item">
-                                <span>56</span>
+                                <div class="num-box">
+
+                                    <span class='numscroller second' data-min='1' data-max='56' data-delay='5'
+                                        data-increment='10'>56</span>
+                                </div>
+                                <!-- <span>56</span> -->
                                 <p>A large team of the best specialists.</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
                             <div class="item">
-                                <span>2000+</span>
+                                <div class="num-box">
+
+                                    <span class='numscroller third' data-min='1' data-max='2000' data-delay='5'
+                                        data-increment='10'>2000</span><span class="num">+</span>
+                                </div>
+                                <!-- <span>2000+</span> -->
                                 <p>Customers who were satisfied with our work.</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
                             <div class="item">
-                                <span>100%</span>
+                                <!-- <span>100%</span> -->
+                                <div class="num-box">
+
+                                    <span class='numscroller fourth' data-min='1' data-max='100' data-delay='5'
+                                        data-increment='10'>100</span><span class="num">%</span>
+                                </div>
                                 <p>Our values are good organization and result orientation.</p>
                             </div>
                         </div>
@@ -577,6 +597,8 @@
         <a href="#"><i class="fa-solid fa-chevron-up"></i></a>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./numscroller-1.0.js"></script>
     <script>
         window.addEventListener('scroll', function () {
             let nav = document.querySelector("header");
