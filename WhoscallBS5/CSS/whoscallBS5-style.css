@@ -304,6 +304,34 @@ header .main-nav {
 }
 
 @media (min-width: 576px) {
+    /* .section-banner {
+        height: auto;
+        background: url(https://d3qzy1rn79qj7v.cloudfront.net/premium_hero-3000.png.webp) no-repeat center center/ cover scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+
+
+
+    .section-banner .banner-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-banner .banner-text p {
+        font-size: 18px;
+    }
+
+    .section-banner .banner-text .p {
+        font-size: 14px;
+    }
+
+    .btn-plan {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) {
     .section-banner {
         height: auto;
         background: url(https://d3qzy1rn79qj7v.cloudfront.net/premium_hero-3000.png.webp) no-repeat center center/ cover scroll;
@@ -312,24 +340,20 @@ header .main-nav {
         justify-content: center;
     }
 
-
-
     .section-banner .banner-text h2 {
-        font-size: 2rem;
         text-align: start;
     }
 
     .section-banner .banner-text p {
-        font-size: 24px;
         text-align: start;
     }
 
     .section-banner .banner-text .p {
-        font-size: 23px;
         text-align: start;
     }
 
     .btn-plan {
+        text-align: start;
         margin-top: 10px;
     }
 }
@@ -337,7 +361,8 @@ header .main-nav {
 @media (min-width: 992px) {
     .section-banner {
         margin-top: 88px;
-        height: 50vh;
+        padding: 125px 0;
+        height: 100%;
         background: url(https://d3qzy1rn79qj7v.cloudfront.net/premium_hero-3000.png.webp) no-repeat center center/ cover scroll;
     }
 
@@ -354,11 +379,19 @@ header .main-nav {
     .section-banner::before {
         background-size: auto;
     }
+
+    .section-banner .banner-text p {
+        font-size: 24px;
+    }
+
+    .section-banner .banner-text .p {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 1200px) {
     .section-banner .banner-text h2 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 }
 
@@ -566,8 +599,8 @@ header .main-nav {
 
 .section-give-back p::after {
     content: '';
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background-image: url('../img/dot.svg');
     background-size: 100%;
     background-repeat: no-repeat;
