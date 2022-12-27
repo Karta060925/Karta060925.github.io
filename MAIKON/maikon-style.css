@@ -925,6 +925,24 @@ nav .menu-btn {
     padding: 0 10px;
 }
 
+@media (min-width: 768px) {
+    .projects .item .text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .projects .item .text h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects .item .text h3 {
+        font-size: 2.6rem;
+    }
+}
+
 /* send ----------------------------------------------- */
 .send {
     padding: 100px 0 100px;
