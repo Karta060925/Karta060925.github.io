@@ -562,7 +562,7 @@ header .main-nav {
 
 /* 好評 --------------------------------- */
 .section-give-back {
-    padding: 60px 0;
+    padding: 60px 0 160px;
 }
 
 .section-give-back h2 {
@@ -1081,7 +1081,7 @@ header .main-nav {
 
     .section-qa .accordion .accordion-item h3 span {
         right: 0;
-        font-size: 16px;
+        font-size: 25px;
     }
 
 }
