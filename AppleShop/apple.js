@@ -30,7 +30,7 @@ let iPhone13 = [
     { color: "#437691", colorText: "藍色", pic: "../AppleShop/img/iPhoen13/iphone-13-finish-select-202207-5-4inch-blue.jpg", storage: "256GB", price: 24400 },
     { color: "#437691", colorText: "藍色", pic: "../AppleShop/img/iPhoen13/iphone-13-finish-select-202207-5-4inch-blue.jpg", storage: "512GB", price: 31400 },
 
-    { color: "#4F604E", colorText: "綠色", pic: "../AppleShop/img/iPhone14/iphone-14-finish-select-202209-6-1inch-midnight.jpg", storage: "128GB", price: 20900 },
+    { color: "#4F604E", colorText: "綠色", pic: "../AppleShop/img/iPhoen13/iphone-13-finish-select-202207-5-4inch-green.jpg", storage: "128GB", price: 20900 },
     { color: "#4F604E", colorText: "綠色", pic: "../AppleShop/img/iPhoen13/iphone-13-finish-select-202207-5-4inch-green.jpg", storage: "256GB", price: 24400 },
     { color: "#4F604E", colorText: "綠色", pic: "../AppleShop/img/iPhoen13/iphone-13-finish-select-202207-5-4inch-green.jpg", storage: "512GB", price: 31400 },
 
@@ -50,12 +50,10 @@ let appleContent = document.querySelector(".apple-content");
 // 產品按鈕
 let btnModel = document.querySelectorAll(".btn-model");
 
-// let productTitle
 let price = document.querySelector('.price');
 let btnChange = document.querySelector('.btn-change');
 
 window.onload = function () {
-
 
     btnModel.forEach((item, index) => {
 
@@ -68,6 +66,7 @@ window.onload = function () {
 
             let phone = dataArr[index];
 
+            // 購買標題 生成
             let containerDiv = document.createElement('div');
             containerDiv.classList.add('container-fluid');
 
@@ -92,7 +91,7 @@ window.onload = function () {
             titleRowDiv.append(titleColDiv)
             containerDiv.append(titleRowDiv)
 
-            // 產品圖
+            // 產品圖生成
             let rowDiv = document.createElement('div');
             rowDiv.classList.add('row', 'justify-content-center');
 
@@ -111,7 +110,7 @@ window.onload = function () {
             rowDiv.append(colDiv);
 
 
-            // 產品顏色
+            // 產品顏色生成
             let productColDiv = document.createElement('div');
             productColDiv.classList.add('col-12', 'col-lg-3');
 
@@ -126,29 +125,27 @@ window.onload = function () {
             colorH3.innerText = '外觀。 '
             colorSpan.innerText = '挑選你喜愛的外觀。'
 
-            // let colorP = document.createElement('P');
-            // let colorPSpan = document.createElement('span');
+            let colorP = document.createElement('P');
+            let colorPSpan = document.createElement('span');
 
-            // colorP.innerText = '顏色 - '
-            // colorPSpan.classList.add('color-text-val');
+            colorP.innerText = '顏色'
+            colorPSpan.classList.add('color-text-val');
 
-
-
-            // colorP.append(colorPSpan);
+            colorP.append(colorPSpan);
             colorH3.append(colorSpan);
 
             let colorDiv = document.createElement('div');
             colorDiv.classList.add('color-change', 'color-block');
 
             let countArr = [];
-            phone.forEach((thisPhone, ind) => {
-                countArr.push(thisPhone['colorText']);
+            phone.forEach((color, ind) => {
+                countArr.push(color['colorText']);
             });
 
-            let set1 = new Set(countArr);
+            let setColor = new Set(countArr);
             let colorArr = [];
-            phone.forEach((thisPhone, ind) => {
-                colorArr.push(thisPhone['color']);
+            phone.forEach((colorText, ind) => {
+                colorArr.push(colorText['color']);
             })
 
             let set21 = new Set(colorArr);
@@ -158,7 +155,7 @@ window.onload = function () {
             });
 
             let set = [];
-            set1.forEach(x => {
+            setColor.forEach(x => {
                 set.push(x);
             })
 
@@ -171,14 +168,14 @@ window.onload = function () {
             });
 
             changeItem.append(colorH3)
-            // changeItem.append(colorP)
+            changeItem.append(colorP)
             changeItem.append(colorDiv);
             sideChangeDiv.append(changeItem);
             productColDiv.append(sideChangeDiv);
             rowDiv.append(productColDiv);
 
 
-            //規格生成
+            //規格價錢生成
             let specificationChangeItem = document.createElement('div');
             specificationChangeItem.classList.add('change-item');
 
@@ -192,11 +189,9 @@ window.onload = function () {
             let specificationDiv = document.createElement('div');
             specificationDiv.classList.add('specification-change', 'specification-block')
 
-
-            // 規格
             let typeArr = [];
-            phone.forEach((thisPhone, ind) => {
-                typeArr.push(thisPhone['storage']);
+            phone.forEach((storage, ind) => {
+                typeArr.push(storage['storage']);
             })
 
             let set31 = new Set(typeArr);
@@ -205,12 +200,10 @@ window.onload = function () {
                 set3.push(x);
             });
 
-            // 價錢
             let priceArr = [];
-            phone.forEach((thisPhone, ind) => {
-                priceArr.push(thisPhone['price']);
+            phone.forEach((price, ind) => {
+                priceArr.push(price['price']);
             });
-            // let set4 = new Set(priceArr);
 
             set3.forEach((x, ind) => {
                 let btnChange = document.createElement('div');
@@ -236,7 +229,7 @@ window.onload = function () {
 
 
 
-            // 顯示價錢
+            // 規格按鈕 顯示價錢
             let productPrice = document.querySelector(".product-price");
             let choosePrice = document.querySelectorAll(".btn-change");
 
@@ -246,17 +239,16 @@ window.onload = function () {
                 })
             });
 
-            // 顯示
+            // 顏色按鈕 更換圖片宇顯示顏色文字
             let chooseColorArr = document.querySelectorAll(".btn-color");
-            console.log(chooseColorArr)
-
-            // let colorTextVal = document.querySelector('.color-text-val');
+            let colorTextVal = document.querySelector('.color-text-val');
 
             chooseColorArr.forEach(item => {
                 item.addEventListener('click', () => {
-                    // colorTextVal.innerText = item['colorText']
+                    // 判斷條件true 才能取值
+                    let colorer = phone.find(x => x['color'] == item.innerText)['colorText'];
                     let RGB = phone.find(x => x['color'] == item.innerText)['pic'];
-
+                    colorTextVal.innerText = ` - ${colorer}`
                     img.src = RGB;
                 })
             })
