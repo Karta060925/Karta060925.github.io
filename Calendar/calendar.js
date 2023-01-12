@@ -131,6 +131,7 @@ function renderDate() {
                     // }
                     pDate.onclick = function () {
                         addDateInput.value = `${year}-${month + 1}-${d}`
+                        addTextInput.value = ''
                         addTitle.innerText = `${month + 1}月${d}日`
                         bootstrap.Modal.getOrCreateInstance(addModal).show()
                     }
