@@ -247,7 +247,7 @@ img {
     position: absolute;
     z-index: 1;
     height: 100%;
-    top: -10PX;
+    top: -10px;
     background: rgba(204, 204, 204, 0.911);
     display: flex;
     justify-content: center;

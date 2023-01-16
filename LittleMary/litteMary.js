@@ -260,6 +260,7 @@ let speed; // 速率 (越大走越慢)
 
 let credit = 100
 let numArray = []
+let radioNum
 // let btnMarry = document.querySelector('#btn-marry')
 // let btnMarry1 = document.querySelector('#btn-marry1')
 // let btnMarry2 = document.querySelector('#btn-marry2')
@@ -294,6 +295,8 @@ let bricks;
 let numItems;
 // let fraction;
 
+let radioFalse = document.querySelector('#radio-false')
+let radioTrue = document.querySelector('#radio-true')
 let creditNumber = document.querySelector('#credit-number')
 let bonusNumber = document.querySelector('#bonus-number')
 // let btnCheckNum = document.querySelectorAll('.btn-check-num')
@@ -328,7 +331,7 @@ function go() {
     // console.log(random)
 
     // steps = random; // lv1
-    steps = random + (3 * bricks.length) // 多跑三圈 再停下 lv2
+    steps = random + (2 * bricks.length) // 多跑三圈 再停下 lv2
     allSteps = steps;
     turnAround();
 }
@@ -404,12 +407,12 @@ function renderNumItems() {
 }
 
 function goNum() {
-    speedNum = 150;
+    speedNum = 100;
     let randomNum = Math.floor(Math.random() * numItemData.length) + 1
     // console.log(random)
 
     // steps = random; // lv1
-    stepsNum = randomNum + (8 * numItems.length) // 多跑三圈 再停下 lv2
+    stepsNum = randomNum + (5 * numItems.length) // 多跑三圈 再停下 lv2
     allStepsNum = steps;
     turnAroundNum();
 }
@@ -438,7 +441,7 @@ function turnAroundNum() {
             textBox.innerText = brickData[current].target() * numItemData[currentNum].fraction
         }
         numArray.push(brickData[current].target() + numItemData[currentNum].fraction)
-        textBox.innerHTML = `Fraction：${brickData[current].target()} <br> Bonus：${brickData[current].target() + numItemData[currentNum].fraction} <br> Total：${SumData(numArray)}`
+        textBox.innerHTML = `Fraction：${brickData[current].target()} <br> Bonus：${numItemData[currentNum].fraction} <br> Total：${SumData(numArray)}`
     }
 
 }
@@ -460,12 +463,33 @@ function getRandomIntInclusive(min, max) {
 
 // 加總
 function SumData(arr) {
-    var sum = 0;
-    for (var i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     };
     return sum;
 }
+
+// function radio() {
+//     let radio = document.querySelectorAll('.radio');
+//     let Str = "";
+//     for (let i = 0; i < radio.length; i++) {
+//         if (radio[i].type == "radio") {
+//             if (radio[i].checked) {
+//                 if (radioNum == radio[i].value) {
+//                     Str = 'true'
+//                 }
+//                 if (Str == "") {
+//                     console.log(radioNum)
+//                     Str = "您勾選的項目 : " + radio[i].value;
+//                 } else {
+//                     Str += "\n您勾選的項目 : " + radio[i].value;
+//                 }
+//             }
+//         }
+//     }
+//     alert(Str);
+// }
 
 
 // window.load
@@ -514,6 +538,8 @@ window.onload = function () {
     deductCredit()
     renderBrick();
     renderNumItems();
+
+
     startBtn.onclick = function () {
         if (credit > 0) {
             // let numValue = getRandomIntInclusive(min, max)
@@ -522,10 +548,20 @@ window.onload = function () {
             go();
             goNum();
             creditNumber.innerText = `$${credit}`
+            // if (radioFalse.value == false) {
+            //     creditNumber.innerText = `$${credit}333333`
+            // }
+            // if (numValue > 50) {
+            //     radioNum = true
+            // }
+            // else {
+            //     radioNum = false
+            // }
+            // radio()
         }
-        else {
+        // else {
 
-        }
+        // }
 
     }
 }
