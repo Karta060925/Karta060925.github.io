@@ -3,8 +3,9 @@
     justify-content: center;
     align-items: center; */
     padding-top: 80px;
+    padding-bottom: 60px;
     background: #eee;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .calendar {

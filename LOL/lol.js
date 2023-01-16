@@ -6,6 +6,8 @@ let btnCreateHeroArray, btnListHero, btnTableHero;
 let tbody;
 
 window.onload = function () {
+
+    //DOM
     // 選到 #container, 選到 btn 建立&清除, 選到btn 顯示文字, 選到btn 顯示表格, 選到 #result(顯示表格)
     container = document.querySelector("#container");
     btnCreateHeroArray = document.getElementById("createhero");
@@ -14,6 +16,7 @@ window.onload = function () {
     result = document.getElementById("result");
     tbody = document.querySelector('tbody');
 
+    //event click
     // btn 建立&清除 監聽
     btnCreateHeroArray.addEventListener("click", function () {
         alert("從DOM建立英雄人物陣列資料成功！");
