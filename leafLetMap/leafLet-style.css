@@ -51,7 +51,13 @@
 
 .content p {
     padding-left: 10px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 0;
+}
 
+.content p:hover {
+    background-color: #eee;
 }
 
 .text-area {

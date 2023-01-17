@@ -64,7 +64,12 @@ function renderMarker(cityName) {
 
         let p = document.createElement('p')
         p.innerText = x.name
+        // p.setAttribute.add('data-index', x.longitude)
         content.appendChild(p)
+        p.addEventListener('mousedown', function () {
+            map.setView([x.latitude, x.longitude], 19)
+
+        })
         // console.log(x.name)
         // Popup 提示彈出
         marker.bindPopup(`<h4>${x.name}<span>${x.name_eng}</span></h4>`)
