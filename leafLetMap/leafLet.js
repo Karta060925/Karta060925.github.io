@@ -69,11 +69,16 @@ function renderMarker(cityName) {
         p.addEventListener('mousedown', function () {
             map.setView([x.latitude, x.longitude], 19)
 
+            marker.bindTooltip(`<h4>${x.name}<span>${x.name_eng}</span></h4>`, {
+                direction: 'bottom', // right、left、top、bottom、center。default: auto
+                sticky: true, // true 跟著滑鼠移動。default: false
+                permanent: false, // 是滑鼠移過才出現，還是一直出現
+                opacity: 1.0
+            }).openTooltip();
         })
         // console.log(x.name)
         // Popup 提示彈出
         marker.bindPopup(`<h4>${x.name}<span>${x.name_eng}</span></h4>`)
-
         marker.addEventListener('click', function () {
             let textHead = document.querySelector('.text-head')
             textHead.innerHTML = ` <h2>${x.name}

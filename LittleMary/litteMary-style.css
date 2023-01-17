@@ -2,11 +2,39 @@ body {
     padding: 30px 0;
     min-height: 100vh;
     background: rgb(7, 7, 7);
+    position: relative;
 }
 
-i {
+
+/* i {
     font-size: 48px;
+} */
+
+.btn-back-index {
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+    margin: 15px;
+    border-radius: 100%;
+    color: #666;
+    width: 70px;
+    height: 70px;
+    text-decoration: none;
+    /* font-size: 16px */
 }
+
+.btn-back-index:hover {
+    background-color: #666;
+    color: #ddd;
+}
+
 
 .col {
     border: 1px solid transparent;
