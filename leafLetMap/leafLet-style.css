@@ -1,0 +1,119 @@
+:root {
+    --color-primary: rgb(32, 33, 36);
+}
+
+.section-map {
+    position: relative;
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+.side-div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    height: 50vh;
+    box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    width: 100%;
+    /* padding: 100px 0; */
+    padding: 0;
+    background: #fff;
+    overflow: auto;
+}
+
+@media (min-width: 768px) {
+    .side-div {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 999;
+        height: 100vh;
+        box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+        width: 400px;
+        /* padding: 100px 0; */
+        padding: 50px 0;
+        background: #fff;
+        overflow: auto;
+    }
+}
+
+.col-12 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+
+
+.content p {
+    padding-left: 10px;
+
+}
+
+.text-area {
+    min-height: 100px;
+}
+
+.text-area .content {
+    overflow-y: auto;
+    max-height: calc(100vh - 85vh);
+}
+
+.text-head h2,
+.text-area h2 {
+    font-size: 1.375rem;
+    font-weight: bolder;
+    letter-spacing: 0;
+    color: var(--color-primary) line-height: 1.75rem;
+    padding-left: 10px;
+}
+
+.text-head h2 span {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.text-body a,
+.text-body p {
+    display: block;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+
+}
+
+.text-body span {
+    display: inline-block;
+    width: 15px;
+    text-align: center;
+    margin-right: 15px;
+    color: rgb(0, 140, 255);
+}
+
+.text-body a:hover {
+    background-color: #eee;
+}
+
+h4 {
+    color: #666;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+h4 span {
+    display: block;
+    font-size: 14px;
+
+}
