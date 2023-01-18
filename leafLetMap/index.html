@@ -34,7 +34,8 @@
     <section class="section-map">
         <div id="map" style="width: 100%;"></div>
         <div class="side-div">
-            <a class="btn-back-index" href="/"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a class="btn-back-index" href="/" data-bs-toggle="tooltip" data-bs-title="回索引"><i
+                    class="fa-solid fa-right-from-bracket"></i></a>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -47,7 +48,7 @@
                     </div>
                     <div class="col-12">
                         <div class="text-area">
-                            <h2 id="museumName">博物館資訊</h2>
+                            <h2 id="museumName"></h2>
                             <div class="content">
 
                             </div>
@@ -55,8 +56,8 @@
                     </div>
                     <div class="col-12">
                         <div class="text-head">
-                            <h2>博物館名稱
-                                <span>類型：</span>
+                            <h2>
+                                <span></span>
                             </h2>
                         </div>
                     </div>
@@ -79,6 +80,10 @@
         crossorigin="anonymous"></script>
 
     <script src="leafLet.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 
 </body>
 

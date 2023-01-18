@@ -79,9 +79,9 @@
     background-color: #eee;
 }
 
-.text-area {
+/* .text-area {
     min-height: 100px;
-}
+} */
 
 .text-area .content {
     overflow-y: auto;
@@ -141,4 +141,8 @@ h4 span {
     display: block;
     font-size: 14px;
 
+}
+
+.leaflet-popup.leaflet-zoom-animated {
+    bottom: 15px !important;
 }
