@@ -1,0 +1,246 @@
+header {
+    background-color: #429EE6;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+header a h1 {
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+header .btn {
+    color: #fff;
+    border-radius: 50%;
+}
+
+header .btn-item button.btn:hover,
+header .btn-item button.btn:active,
+header .btn-item button.btn:visited,
+header .btn-item button.btn:focus-visible {
+    background: rgba(204, 204, 204, 0.274);
+    color: #fff;
+}
+
+.bg-side,
+.bg-content {
+    min-height: auto;
+    padding-top: 0px;
+    padding-bottom: 40px;
+
+}
+
+.bg-side {
+    background-color: #FAFAFA;
+    padding-top: 60px;
+}
+
+.bg-side .btn-to-list,
+.btn-to-list-link {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #666;
+    font-size: 14px;
+    background: ;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.bg-side .btn-to-list:hover,
+.btn-to-list-link:hover {
+    background: #eaeaea;
+    color: #333;
+}
+
+.bg-side .btn-to-list.active {
+    background: #eaeaea;
+}
+
+.bg-side .btn-to-list {
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.bg-side .btn-to-list .number {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #aaaaaa;
+    color: #eee;
+    font-size: 12px;
+
+}
+
+
+.bg-content .list-box {
+    height: auto;
+    overflow-y: none;
+}
+
+
+
+.bg-content .item {
+    padding: 60px 0;
+
+}
+
+@media (min-width: 1200px) {
+
+    .bg-side,
+    .bg-content {
+        min-height: 100vh;
+        padding-top: 70px;
+
+    }
+
+    .bg-side {
+        background-color: #FAFAFA;
+        padding-top: 130px;
+    }
+
+    .bg-content .item {
+        padding: 60px;
+    }
+
+    .bg-content .list-box {
+        height: calc(100vh - 30vh);
+        overflow-y: auto;
+    }
+}
+
+.bg-content .title-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.bg-content .title-box h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bolder;
+}
+
+.bg-content .title-box h2 span {
+    font-size: 14px;
+    display: block;
+    padding: 10px 5px;
+    color: #666;
+}
+
+.bg-content .title-box .btn {
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.list-item.done .form-control {
+    text-decoration: line-through;
+}
+
+.list-item {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.list-item .list-content {
+    padding: 15px 5px 15px 20px;
+    flex-grow: 1;
+}
+
+.list-item .form-control {
+    border: 0;
+    background-color: #ededed;
+
+}
+
+.form-control:disabled {
+    background-color: #fff;
+    opacity: 1;
+}
+
+.list-item .form-check-label {
+    cursor: pointer;
+    display: block;
+}
+
+.list-item .form-check-label.active {
+    color: #ccc;
+    text-decoration: line-through
+}
+
+.list-item .form-check-input {
+    width: 30px;
+    min-height: 30px;
+    cursor: pointer;
+}
+
+.list-item .form-check-input[type=checkbox] {
+    border-radius: 50%;
+
+}
+
+.list-item .form-check-input:checked {
+    background-color: #04EB84;
+    border-color: #0ED678;
+}
+
+.list-item .form-check-input:focus {
+    /* border-color: #86b7fe; */
+    border-color: #0ED678;
+
+    outline: 0;
+    box-shadow: 0 0 3px 0.25rem #04eb834f;
+}
+
+.list-item .list-input {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item .list-btn {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.list-item .list-btn .btn {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.btn:disabled {
+    border: none;
+}

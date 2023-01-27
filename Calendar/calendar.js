@@ -236,8 +236,8 @@ function removeTodoItem() {
 
     renderDate()
 }
-// window.onload --------------------------------------
 
+// window.onload --------------------------------------
 window.onload = function () {
     renderDate()
 }
